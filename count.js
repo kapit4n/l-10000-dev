@@ -65,7 +65,7 @@ setTimeout(function() {
     console.log("Scala is: " + reducedScala)
 
     reducedDotnet = totalCountsDotnet.reduce(sumFunc, 0);
-    writeCount('scalaCount.txt', reducedDotnet);
+    writeCount('dotnetCount.txt', reducedDotnet);
     console.log("DotNet is: " + reducedDotnet)
 
     console.log("total is: "  + (reducedJs + reducedJava + reducedScala + reducedDotnet));
