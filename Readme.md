@@ -3,10 +3,9 @@ node ./count.js
 
 # Activities
 * Write source code related to any topic
-* comment the understanding part of it
+* Comment the understanding part of it
 
 # Counts
-*    CS:        859
 *    Scala:     877
 *    JS:        879
 *    Java:      1129
