@@ -4,9 +4,7 @@
 - New technology features
   
 ## Release notes
-- React 6.4 release notes
-
+- React 16 release notes
 
 ## New technology features
 - Angular 7 new features
-
