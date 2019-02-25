@@ -6,10 +6,12 @@ node ./count.js
 * Comment the understanding part of it
 
 # Counts
-*    Scala:     877
-*    JS:        879
+*    WDs:       169
+*    CS:        1009
+*    Scala:     1090
 *    Java:      1129
-*    TOTAL:     3744
+*    JS:        1184
+*    TOTAL:     4581
 
 # Purposes
 * Reach to 100 lines daily
