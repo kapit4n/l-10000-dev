@@ -6,9 +6,12 @@
   
 ## Release notes
 - react 16 release notes
+- react 16.8
 
-## New technology features
-- Angular 7 new features
+## Technology features
+- angular 7 new features
 - aspnet core features
-- React js main features
-- 
+- react js main features
+- play framework features
+- scala features
+- algorithm descriptions
