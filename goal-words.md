@@ -15,3 +15,4 @@
 - play framework features
 - scala features
 - algorithm descriptions
+- why modularize reactjs
