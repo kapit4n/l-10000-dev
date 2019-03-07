@@ -3,7 +3,11 @@
 - Release notes
 - Technology features
 - algorithms
-  
+- req and skills
+- tutorials
+- machine learning
+
+
 ## Release notes
 - react 16 release notes
 - react 16.8
@@ -24,3 +28,12 @@
 - binary search algo
 - pattern searching algo
 - linear search algo
+
+## req and skills
+- react developer skills
+
+## tutorials
+- react tutorial
+
+## machine learning
+- introduction ml
