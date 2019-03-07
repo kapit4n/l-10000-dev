@@ -22,3 +22,5 @@
 
 ## algorithms
 - binary search algo
+- pattern searching algo
+- linear search algo

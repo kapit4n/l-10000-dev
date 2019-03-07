@@ -1,10 +1,14 @@
 # Goals with csharp programing language
 
+- microservices
+- algorithms
 - write clean code
 - aspnet version
-- microservices
 - machine larning
 
 ## Microservices
 - Service Fabric
 - ML.net
+
+## Algorithms
+- pattern searching
