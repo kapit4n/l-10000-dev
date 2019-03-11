@@ -126,6 +126,12 @@ node ./count.js
 * 20 commits more
     `;
 
+    let enfore = `
+# Enforce
+* Algorithms
+* Code writing velocity
+    `;
+
     let countInfo = "# All count" + result.reduce((x, y) => x + "\n- " + y.lan + ":\t" + y.lines, "");
     countInfo += "\n" + run +"\n" +  activity +  purposes;
     writeCount('Readme.md', countInfo);

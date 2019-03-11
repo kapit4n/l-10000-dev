@@ -23,17 +23,25 @@
 - why modularize reactjs
 - react native features
 - webassembly web dev
+- react libraries
+- angular component libraries
+- reactN features
+- nebular feature
 
 ## algorithms
 - binary search algo
 - pattern searching algo
 - linear search algo
+- hackerrank problems
 
 ## req and skills
 - react developer skills
 
 ## tutorials
 - react tutorial
+- react native dev guide
 
 ## machine learning
 - introduction ml
+- value iteration networks
+- 

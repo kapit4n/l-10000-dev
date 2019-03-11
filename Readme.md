@@ -2,8 +2,8 @@
 - Java :	1132
 - Scala:	1132
 - CS   :	1134
-- JS   :	1506
-- WD   :	1984
+- JS   :	1602
+- WD   :	2576
 
 # run it
 node ./count.js
