@@ -114,7 +114,8 @@ setTimeout(function () {
 node ./count.js
     `;
 
-    let activity = `# Activities
+    let activity = `
+# Activities
 * Write source code related to any topic
 * Comment the understanding part of it
     `;
@@ -124,16 +125,15 @@ node ./count.js
 * Reach to 100 lines daily
 * 2000 lines of source code monthly
 * 20 commits more
-    `;
+`;
 
-    let enfore = `
-# Enforce
+    let enfore = `# Enforce
 * Algorithms
 * Code writing velocity
-    `;
+`;
 
     let countInfo = "# All count" + result.reduce((x, y) => x + "\n- " + y.lan + ":\t" + y.lines, "");
-    countInfo += "\n" + run +"\n" +  activity +  purposes;
+    countInfo += "\n" + run +"\n" + enfore +  activity +  purposes;
     writeCount('Readme.md', countInfo);
 
     result.forEach(x => console.log("*    " + x.lan + ":\t" + x.lines));
