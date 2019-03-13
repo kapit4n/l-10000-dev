@@ -12,3 +12,6 @@
 
 ## Algorithms
 - pattern searching
+
+## Libraries
+- json from excel cs
