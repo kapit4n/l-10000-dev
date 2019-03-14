@@ -34,6 +34,7 @@
 - pattern searching algo
 - linear search algo
 - hackerrank problems
+- backtracking algo
 
 ## req and skills
 - react developer skills

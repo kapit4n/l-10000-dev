@@ -12,6 +12,7 @@
 - react native started
 - redux example
 - reactN example
+- react create components
 
 ## graphQL
 - introduction graphql
