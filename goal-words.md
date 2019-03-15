@@ -35,6 +35,7 @@
 - linear search algo
 - hackerrank problems
 - backtracking algo
+- number theory algo
 
 ## req and skills
 - react developer skills

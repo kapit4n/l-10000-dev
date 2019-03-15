@@ -1,9 +1,9 @@
 # All count
-- Scala:	1132
 - CS   :	1178
+- Scala:	1268
 - Java :	1423
-- JS   :	1981
-- WD   :	2793
+- JS   :	2305
+- WD   :	3049
 
 # run it
 node ./count.js
