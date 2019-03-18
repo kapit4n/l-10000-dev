@@ -39,6 +39,8 @@
 
 ## req and skills
 - react developer skills
+- tips to software demo
+- 
 
 ## tutorials
 - react tutorial
