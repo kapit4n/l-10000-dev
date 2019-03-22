@@ -5,6 +5,7 @@
 - Akka
 - Spring framework
 - scala features
+- algorithms
 
 
 ## Play framework
@@ -14,3 +15,7 @@
 ## Scala features
 - from python to scala
 - tips to software demo
+
+## algorithms
+- dynamic programming
+- backtracking scala

@@ -15,6 +15,7 @@
 - redux example
 - reactN example
 - react create components
+- introducing hooks
 
 ## graphQL
 - introduction graphql

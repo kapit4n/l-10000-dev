@@ -6,6 +6,7 @@
 - req and skills
 - tutorials
 - machine learning
+- business description
 
 
 ## Release notes
@@ -36,11 +37,14 @@
 - hackerrank problems
 - backtracking algo
 - number theory algo
+- dynamic programming
+- backtracking algorithms
+- 
 
 ## req and skills
 - react developer skills
 - tips to software demo
-- 
+- nodejs developer course
 
 ## tutorials
 - react tutorial
@@ -49,4 +53,8 @@
 ## machine learning
 - introduction ml
 - value iteration networks
+- 
+
+## business description
+- sysde
 - 

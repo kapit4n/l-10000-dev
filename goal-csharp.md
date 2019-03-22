@@ -12,6 +12,7 @@
 
 ## Algorithms
 - pattern searching
+- dynamic programming problems
 
 ## Libraries
 - json from excel cs
