@@ -16,3 +16,9 @@
 
 ## Libraries
 - json from excel cs
+- graphql dotnet
+
+## techniques
+- pure pagination csharp
+- pagination in sql server
+- 
