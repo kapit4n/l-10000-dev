@@ -8,6 +8,8 @@
 ## angular
 - unit testing angular
 - angular reactive templates
+- lazy loading feature modules
+- 
 
 ## reactjs
 - react native started
@@ -18,7 +20,9 @@
 - reactN example
 - react create components
 - introducing hooks
-- 
+- state and lifecycle
+- passport react js
+- reducers redux
 
 ## graphQL
 - introduction graphql
