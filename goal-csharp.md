@@ -9,6 +9,7 @@
 ## Microservices
 - Service Fabric
 - ML.net
+- simple data driven CRUD service
 
 ## Algorithms
 - pattern searching

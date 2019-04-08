@@ -9,7 +9,7 @@
 - unit testing angular
 - angular reactive templates
 - lazy loading feature modules
-- 
+- modal angular
 
 ## reactjs
 - react native started
@@ -30,3 +30,6 @@
 
 ## Nodejs
 - what is new in Node 10?
+
+## Algorithms
+- javascript algorithms
