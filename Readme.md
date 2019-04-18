@@ -1,10 +1,10 @@
 # All count
-- Scala:	1590
-- Java :	2017
+- Scala:	1682
 - CS   :	2023
-- WD   :	3548
-- JS   :	4151
-- TOTAL:	13329
+- Java :	2119
+- WD   :	3686
+- JS   :	4521
+- TOTAL:	14031
 
 # run it
 node ./count.js
@@ -21,3 +21,8 @@ node ./count.js
 * Reach to 100 lines daily
 * 2000 lines of source code monthly
 * 20 commits more
+
+# Technologies
+* Angular, React, Vue
+* Spring, Play
+* Scala, Java

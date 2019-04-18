@@ -132,12 +132,19 @@ node ./count.js
 * Code writing velocity
 `;
 
+    let technologies = `
+# Technologies
+* Angular, React, Vue
+* Spring, Play
+* Scala, Java
+`;
+
     let countInfo = "# All count" + result.reduce((x, y) => x + "\n- " + y.lan + ":\t" + y.lines, "");
     
     result.forEach(x => console.log("*    " + x.lan + ":\t" + x.lines));
     console.log("*    TOTAL:\t" + (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords));
     countInfo += "\n- TOTAL:\t" + (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords);
-    countInfo += "\n" + run +"\n" + enfore +  activity +  purposes;
+    countInfo += "\n" + run +"\n" + enfore +  activity +  purposes +  technologies;
     
     writeCount('Readme.md', countInfo);
 

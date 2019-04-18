@@ -10,6 +10,7 @@
 - angular reactive templates
 - lazy loading feature modules
 - modal angular
+- wijmo demo
 
 ## reactjs
 - react native started
