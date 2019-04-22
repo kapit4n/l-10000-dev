@@ -139,17 +139,15 @@ node ./count.js
 * Scala, Java
 `;
 
-    let countInfo = "# All count" + result.reduce((x, y) => x + "\n- " + y.lan + ":\t" + y.lines, "");
+    let countInfo = "# All count" + result.reduce((x, y) => x + "\n- " + y.lan + "\t" + y.lines + "" + "\t" + Number((y.lines / 100000 * 100 * 5)).toFixed(3) + "%", "");
     
 
     let total = (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords);
-    let goalPercent = total / 100000 * 100;
+    let goalPercent = Number(total / 100000 * 100).toFixed(3);
 
-    result.forEach(x => console.log("*    " + x.lan + ":\t" + x.lines));
-    console.log("*    TOTAL:\t" + total);
-    console.log("*    PERCENT:\t" + goalPercent + "%");
-    countInfo += "\n- TOTAL:\t" + total;
-    countInfo += "\n- PERCENT:\t" + goalPercent + "%";
+    countInfo += "\n ------------------------------------------------";
+    countInfo += "\n- TOTAL:\t" + total + ":\t" + goalPercent + "%";
+    console.log(countInfo);
     countInfo += "\n" + run +"\n" + enfore +  activity +  purposes +  technologies;
     
     writeCount('Readme.md', countInfo);
