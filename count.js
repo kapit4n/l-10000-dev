@@ -139,14 +139,15 @@ node ./count.js
 * Scala, Java
 `;
 
-    let countInfo = "# All count" + result.reduce((x, y) => x + "\n- " + y.lan + "\t" + y.lines + "" + "\t" + Number((y.lines / 100000 * 100 * 5)).toFixed(3) + "%", "");
+    let colHeaders =  "\n|Language" + "|Lines"  + "|" + "%|"
+    colHeaders += "\n|----------|-------|--------|";
+    let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + Number((y.lines / 100000 * 100 * 5)).toFixed(3) + "%|", colHeaders);
     
 
     let total = (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords);
     let goalPercent = Number(total / 100000 * 100).toFixed(3);
 
-    countInfo += "\n ------------------------------------------------";
-    countInfo += "\n- TOTAL:\t" + total + ":\t" + goalPercent + "%";
+    countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
     console.log(countInfo);
     countInfo += "\n" + run +"\n" + enfore +  activity +  purposes +  technologies;
     
