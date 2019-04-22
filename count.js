@@ -141,7 +141,8 @@ node ./count.js
 
     let colHeaders =  "\n|Language" + "|Lines"  + "|" + "%|"
     colHeaders += "\n|----------|-------|--------|";
-    let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + Number((y.lines / 100000 * 100 * 5)).toFixed(3) + "%|", colHeaders);
+    colHeaders += '\n|[=25% "25%"]|[=25% "25%"]|[=25% "25%"]|';
+    let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + '![progress](http://progressed.io/bar/' + Number((y.lines / 100000 * 100 * 5)).toFixed(0) + ' "progress")'  + "|", colHeaders);
     
 
     let total = (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords);
