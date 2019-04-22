@@ -141,7 +141,6 @@ node ./count.js
 
     let colHeaders =  "\n|Language" + "|Lines"  + "|" + "%|"
     colHeaders += "\n|----------|-------|--------|";
-    colHeaders += '\n|[=25% "25%"]|[=25% "25%"]|[=25% "25%"]|';
     let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + '![progress](http://progressed.io/bar/' + Number((y.lines / 100000 * 100 * 5)).toFixed(0) + ' "progress")'  + "|", colHeaders);
     
 
