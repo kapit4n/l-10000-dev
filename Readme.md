@@ -1,10 +1,11 @@
 # All count
-- Scala:	1860
 - CS   :	2023
 - Java :	2119
+- Scala:	2293
 - WD   :	3686
 - JS   :	4521
-- TOTAL:	14209
+- TOTAL:	14642
+- PERCENT:	14.642%
 
 # run it
 node ./count.js

@@ -17,5 +17,6 @@
 - tips to software demo
 
 ## algorithms
+- recursion
 - dynamic programming
 - backtracking scala

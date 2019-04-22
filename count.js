@@ -141,9 +141,15 @@ node ./count.js
 
     let countInfo = "# All count" + result.reduce((x, y) => x + "\n- " + y.lan + ":\t" + y.lines, "");
     
+
+    let total = (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords);
+    let goalPercent = total / 100000 * 100;
+
     result.forEach(x => console.log("*    " + x.lan + ":\t" + x.lines));
-    console.log("*    TOTAL:\t" + (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords));
-    countInfo += "\n- TOTAL:\t" + (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords);
+    console.log("*    TOTAL:\t" + total);
+    console.log("*    PERCENT:\t" + goalPercent + "%");
+    countInfo += "\n- TOTAL:\t" + total;
+    countInfo += "\n- PERCENT:\t" + goalPercent + "%";
     countInfo += "\n" + run +"\n" + enfore +  activity +  purposes +  technologies;
     
     writeCount('Readme.md', countInfo);
