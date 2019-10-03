@@ -1,22 +1,21 @@
-const fs = require('fs');
-const srcFilejs = './src/js';
-const srcFileJava = './src/java';
-const srcFileScala = './src/scala';
-const srcFileDotnet = './src/dotnet';
-const srcFileWords = './src/words';
-const srcFileGo = './src/go';
-const srcFilePy = './src/python';
+const fs = require("fs");
+const srcFilejs = "./src/js";
+const srcFileJava = "./src/java";
+const srcFileScala = "./src/scala";
+const srcFileDotnet = "./src/dotnet";
+const srcFileWords = "./src/words";
+const srcFileGo = "./src/go";
+const srcFilePy = "./src/python";
 
-const countLines = function (filePath, callback) {
-    let i;
-    let count = 0;
-    fs.createReadStream(filePath)
-        .on('error', e => callback(e))
-        .on('data', chunk => {
-            for (i = 0; i < chunk.length; ++i)
-                if (chunk[i] == 10) count++;
-        })
-        .on('end', () => callback(null, count));
+const countLines = function(filePath, callback) {
+  let i;
+  let count = 0;
+  fs.createReadStream(filePath)
+    .on("error", e => callback(e))
+    .on("data", chunk => {
+      for (i = 0; i < chunk.length; ++i) if (chunk[i] == 10) count++;
+    })
+    .on("end", () => callback(null, count));
 };
 
 var totalCountsJs = [];
@@ -28,18 +27,18 @@ var totalCountsDotnet = [];
 var totalCountsWords = [];
 
 function countLinesFiles(srcFile, files, collection) {
-    files.forEach(f => {
-        countLines(srcFile + "/" + f, function (err, data) {
-            collection.push(data + 1);
-        });
-    })
+  files.forEach(f => {
+    countLines(srcFile + "/" + f, function(err, data) {
+      collection.push(data + 1);
+    });
+  });
 }
 
 function countFileByLanguage(srcFile, collection, displayFiles) {
-    fs.readdir(srcFile, (err, files) => {
-        if (displayFiles) console.log("Files: " + files.join(", "));
-        countLinesFiles(srcFile, files, collection);
-    })
+  fs.readdir(srcFile, (err, files) => {
+    if (displayFiles) console.log("Files: " + files.join(", "));
+    countLinesFiles(srcFile, files, collection);
+  });
 }
 
 countFileByLanguage(srcFilejs, totalCountsJs);
@@ -51,125 +50,146 @@ countFileByLanguage(srcFileDotnet, totalCountsDotnet);
 countFileByLanguage(srcFileWords, totalCountsWords);
 
 function writeCount(fileName, content) {
-    fs.writeFile(fileName, content, function (err) {
-        if (err) return console.log(error);
-    });
+  fs.writeFile(fileName, content, function(err) {
+    if (err) return console.log(error);
+  });
 }
 
 function writeCountAll(fileName, content) {
-    fs.writeFile(fileName, content, function (err) {
-        if (err) return console.log(error);
-    });
+  fs.writeFile(fileName, content, function(err) {
+    if (err) return console.log(error);
+  });
 }
 
 function sumFunc(x, y) {
-    return x + y;
+  return x + y;
 }
 
-setTimeout(function () {
+setTimeout(function() {
+  var result = [];
+  let displayOrderd = true;
 
-    var result = [];
-    let displayOrderd = true;
+  reducedJs = totalCountsJs.reduce(sumFunc, 0);
+  writeCount("jsCount.txt", reducedJs);
+  result.push({
+    lan: "JS   ",
+    lines: reducedJs
+  });
 
-    reducedJs = totalCountsJs.reduce(sumFunc, 0);
-    writeCount('jsCount.txt', reducedJs);
-    result.push({
-        lan: "JS   ",
-        lines: reducedJs
-    });
+  reducedGo = totalCountsGo.reduce(sumFunc, 0);
+  writeCount("goCount.txt", reducedGo);
+  result.push({
+    lan: "GO   ",
+    lines: reducedGo
+  });
 
-    reducedGo = totalCountsGo.reduce(sumFunc, 0);
-    writeCount('goCount.txt', reducedGo);
-    result.push({
-        lan: "GO   ",
-        lines: reducedGo
-    });
+  reducedPy = totalCountsPy.reduce(sumFunc, 0);
+  writeCount("pyCount.txt", reducedPy);
+  result.push({
+    lan: "Python ",
+    lines: reducedPy
+  });
 
-    reducedPy = totalCountsPy.reduce(sumFunc, 0);
-    writeCount('pyCount.txt', reducedPy);
-    result.push({
-        lan: "Python ",
-        lines: reducedPy
-    });
+  reducedJava = totalCountsJava.reduce(sumFunc, 0);
+  writeCount("javaCount.txt", reducedJava);
 
-    reducedJava = totalCountsJava.reduce(sumFunc, 0);
-    writeCount('javaCount.txt', reducedJava);
+  result.push({
+    lan: "Java ",
+    lines: reducedJava
+  });
 
-    result.push({
-        lan: "Java ",
-        lines: reducedJava
-    });
+  reducedScala = totalCountsScala.reduce(sumFunc, 0);
+  writeCount("scalaCount.txt", reducedScala);
+  result.push({
+    lan: "Scala",
+    lines: reducedScala
+  });
 
-    reducedScala = totalCountsScala.reduce(sumFunc, 0);
-    writeCount('scalaCount.txt', reducedScala);
-    result.push({
-        lan: "Scala",
-        lines: reducedScala
-    });
+  reducedDotnet = totalCountsDotnet.reduce(sumFunc, 0);
+  writeCount("dotnetCount.txt", reducedDotnet);
+  result.push({
+    lan: "CS   ",
+    lines: reducedDotnet
+  });
 
-    reducedDotnet = totalCountsDotnet.reduce(sumFunc, 0);
-    writeCount('dotnetCount.txt', reducedDotnet);
-    result.push({
-        lan: "CS   ",
-        lines: reducedDotnet
-    });
+  reducedWords = totalCountsWords.reduce(sumFunc, 0);
+  writeCount("wordsCount.txt", reducedWords);
+  result.push({
+    lan: "WD   ",
+    lines: reducedWords
+  });
 
-    reducedWords = totalCountsWords.reduce(sumFunc, 0);
-    writeCount('wordsCount.txt', reducedWords);
-    result.push({
-        lan: "WD   ",
-        lines: reducedWords
-    });
+  if (displayOrderd) {
+    result.sort((a, b) => a.lines > b.lines);
+  }
 
-    if (displayOrderd) {
-        result.sort((a, b) => a.lines > b.lines);
-    }
-
-
-    let run = `
+  let run = `
 # run it
 node ./count.js
     `;
 
-    let activity = `
+  let activity = `
 # Activities
 * Write source code related to any topic
 * Comment the understanding part of it
     `;
 
-    let purposes = `
+  let purposes = `
 # Purposes
 * Reach to 100 lines daily
 * 2000 lines of source code monthly
 * 20 commits more
 `;
 
-    let enfore = `# Enforce
+  let enfore = `# Enforce
 * Algorithms
 * Code writing velocity
 `;
 
-    let technologies = `
+  let technologies = `
 # Technologies
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
 `;
 
-    let colHeaders =  "\n|Language" + "|Lines"  + "|" + "%|" + "%|"
-    colHeaders += "\n|----------|-------|--------|--------|";
-    let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + Number((y.lines / 10000 * 100 * 5)).toFixed(0) + "|" 
-        + '![progress](http://progressed.io/bar/' + Number((y.lines / 10000 * 100 * 5)).toFixed(0) 
-        + ' "progress")'  + "|", colHeaders);
-    
+  let colHeaders = "\n|Language" + "|Lines" + "|" + "%|" + "%|";
+  colHeaders += "\n|----------|-------|--------|--------|";
+  let countInfo =
+    "# All count" +
+    result.reduce(
+      (x, y) =>
+        x +
+        "\n|" +
+        y.lan +
+        "|" +
+        y.lines +
+        "" +
+        "|" +
+        Number((y.lines / 10000) * 100 * 5).toFixed(0) +
+        "|" +
+        "![progress](http://progressed.io/bar/" +
+        Number((y.lines / 10000) * 100 * 5).toFixed(0) +
+        ' "progress")' +
+        "|",
+      colHeaders
+    );
 
-    let total = (reducedJs + reducedGo + reducedPy + reducedJava + reducedScala + reducedDotnet + reducedWords);
-    let goalPercent = Number(total / 10000 * 100).toFixed(3);
+  let total =
+    reducedJs +
+    reducedGo +
+    reducedPy +
+    reducedJava +
+    reducedScala +
+    reducedDotnet +
+    reducedWords;
+  let goalPercent = Number((total / 10000) * 100).toFixed(3);
 
-    countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
-    console.log(countInfo);
-    countInfo += "\n" + run +"\n" + enfore +  activity +  purposes +  technologies;
-    
-    writeCount('Readme.md', countInfo);
+  countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
+  console.log(countInfo);
+  let previous = 0;
+  countInfo += "\n" + "10/02(" + (total - previous) + ")\n";
+  countInfo += "\n" + run + "\n" + enfore + activity + purposes + technologies;
 
+  writeCount("Readme.md", countInfo);
 }, 5000);

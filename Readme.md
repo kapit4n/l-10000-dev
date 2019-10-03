@@ -9,6 +9,8 @@
 |CS   |1|0|![progress](http://progressed.io/bar/0 "progress")|
 |WD   |4|0|![progress](http://progressed.io/bar/0 "progress")|
 |TOTAL|256|2.560%|
+10/02(256)
+
 
 # run it
 node ./count.js
