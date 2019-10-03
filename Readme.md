@@ -2,11 +2,13 @@
 |Language|Lines|%|
 |----------|-------|--------|
 |JS   |8|![progress](http://progressed.io/bar/0 "progress")|
-|Java |7|![progress](http://progressed.io/bar/0 "progress")|
-|Scala|11|![progress](http://progressed.io/bar/1 "progress")|
+|GO   |106|![progress](http://progressed.io/bar/5 "progress")|
+|Python |46|![progress](http://progressed.io/bar/2 "progress")|
+|Java |43|![progress](http://progressed.io/bar/2 "progress")|
+|Scala|32|![progress](http://progressed.io/bar/2 "progress")|
 |CS   |1|![progress](http://progressed.io/bar/0 "progress")|
 |WD   |4|![progress](http://progressed.io/bar/0 "progress")|
-|TOTAL|31|0.310%|
+|TOTAL|240|2.400%|
 
 # run it
 node ./count.js

@@ -4,6 +4,8 @@ const srcFileJava = './src/java';
 const srcFileScala = './src/scala';
 const srcFileDotnet = './src/dotnet';
 const srcFileWords = './src/words';
+const srcFileGo = './src/go';
+const srcFilePy = './src/python';
 
 const countLines = function (filePath, callback) {
     let i;
@@ -18,6 +20,8 @@ const countLines = function (filePath, callback) {
 };
 
 var totalCountsJs = [];
+var totalCountsGo = [];
+var totalCountsPy = [];
 var totalCountsJava = [];
 var totalCountsScala = [];
 var totalCountsDotnet = [];
@@ -39,6 +43,8 @@ function countFileByLanguage(srcFile, collection, displayFiles) {
 }
 
 countFileByLanguage(srcFilejs, totalCountsJs);
+countFileByLanguage(srcFileGo, totalCountsGo);
+countFileByLanguage(srcFilePy, totalCountsPy);
 countFileByLanguage(srcFileJava, totalCountsJava);
 countFileByLanguage(srcFileScala, totalCountsScala);
 countFileByLanguage(srcFileDotnet, totalCountsDotnet);
@@ -72,7 +78,19 @@ setTimeout(function () {
         lines: reducedJs
     });
 
+    reducedGo = totalCountsGo.reduce(sumFunc, 0);
+    writeCount('goCount.txt', reducedGo);
+    result.push({
+        lan: "GO   ",
+        lines: reducedGo
+    });
 
+    reducedPy = totalCountsPy.reduce(sumFunc, 0);
+    writeCount('pyCount.txt', reducedPy);
+    result.push({
+        lan: "Python ",
+        lines: reducedPy
+    });
 
     reducedJava = totalCountsJava.reduce(sumFunc, 0);
     writeCount('javaCount.txt', reducedJava);
@@ -102,7 +120,6 @@ setTimeout(function () {
         lan: "WD   ",
         lines: reducedWords
     });
-
 
     if (displayOrderd) {
         result.sort((a, b) => a.lines > b.lines);
@@ -144,7 +161,7 @@ node ./count.js
     let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + '![progress](http://progressed.io/bar/' + Number((y.lines / 10000 * 100 * 5)).toFixed(0) + ' "progress")'  + "|", colHeaders);
     
 
-    let total = (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords);
+    let total = (reducedJs + reducedGo + reducedPy + reducedJava + reducedScala + reducedDotnet + reducedWords);
     let goalPercent = Number(total / 10000 * 100).toFixed(3);
 
     countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
