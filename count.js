@@ -187,8 +187,9 @@ node ./count.js
 
   countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
   console.log(countInfo);
-  let previous = 0;
-  countInfo += "\n" + "10/02(" + (total - previous) + ")\n";
+  let previous = 256;
+  countInfo += "\n" + "10/02(" + (256) + ")\n";
+  countInfo += "\n" + "10/03(" + (total - previous) + ")\n";
   countInfo += "\n" + run + "\n" + enfore + activity + purposes + technologies;
 
   writeCount("Readme.md", countInfo);
