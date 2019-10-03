@@ -156,9 +156,11 @@ node ./count.js
 * Scala, Java
 `;
 
-    let colHeaders =  "\n|Language" + "|Lines"  + "|" + "%|"
+    let colHeaders =  "\n|Language" + "|Lines"  + "|" + "%|" + "%|"
     colHeaders += "\n|----------|-------|--------|";
-    let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + '![progress](http://progressed.io/bar/' + Number((y.lines / 10000 * 100 * 5)).toFixed(0) + ' "progress")'  + "|", colHeaders);
+    let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + Number((y.lines / 10000 * 100 * 5)).toFixed(0) + "" + "|" 
+        + '![progress](http://progressed.io/bar/' + Number((y.lines / 10000 * 100 * 5)).toFixed(0) 
+        + ' "progress")'  + "|", colHeaders);
     
 
     let total = (reducedJs + reducedGo + reducedPy + reducedJava + reducedScala + reducedDotnet + reducedWords);
