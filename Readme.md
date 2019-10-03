@@ -7,11 +7,11 @@
 |Java |76|4|![progress](http://progressed.io/bar/4 "progress")|
 |Scala|32|2|![progress](http://progressed.io/bar/2 "progress")|
 |CS   |1|0|![progress](http://progressed.io/bar/0 "progress")|
-|WD   |4|0|![progress](http://progressed.io/bar/0 "progress")|
-|TOTAL|365|3.650%|
+|WD   |36|2|![progress](http://progressed.io/bar/2 "progress")|
+|TOTAL|397|3.970%|
 10/02(256)
 
-10/03(109)
+10/03(141)
 
 
 # run it
