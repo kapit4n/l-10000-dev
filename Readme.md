@@ -1,12 +1,12 @@
 # All count
 |Language|Lines|%|
 |----------|-------|--------|
-|JS   |1|![progress](http://progressed.io/bar/0 "progress")|
-|Java |1|![progress](http://progressed.io/bar/0 "progress")|
-|Scala|1|![progress](http://progressed.io/bar/0 "progress")|
+|JS   |8|![progress](http://progressed.io/bar/0 "progress")|
+|Java |7|![progress](http://progressed.io/bar/0 "progress")|
+|Scala|11|![progress](http://progressed.io/bar/1 "progress")|
 |CS   |1|![progress](http://progressed.io/bar/0 "progress")|
-|WD   |1|![progress](http://progressed.io/bar/0 "progress")|
-|TOTAL|5|0.005%|
+|WD   |4|![progress](http://progressed.io/bar/0 "progress")|
+|TOTAL|31|0.310%|
 
 # run it
 node ./count.js

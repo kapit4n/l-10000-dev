@@ -141,11 +141,11 @@ node ./count.js
 
     let colHeaders =  "\n|Language" + "|Lines"  + "|" + "%|"
     colHeaders += "\n|----------|-------|--------|";
-    let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + '![progress](http://progressed.io/bar/' + Number((y.lines / 100000 * 100 * 5)).toFixed(0) + ' "progress")'  + "|", colHeaders);
+    let countInfo = "# All count" + result.reduce((x, y) => x + "\n|" + y.lan + "|" + y.lines + "" + "|" + '![progress](http://progressed.io/bar/' + Number((y.lines / 10000 * 100 * 5)).toFixed(0) + ' "progress")'  + "|", colHeaders);
     
 
     let total = (reducedJs + reducedJava + reducedScala + reducedDotnet + reducedWords);
-    let goalPercent = Number(total / 100000 * 100).toFixed(3);
+    let goalPercent = Number(total / 10000 * 100).toFixed(3);
 
     countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
     console.log(countInfo);
