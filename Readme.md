@@ -5,13 +5,13 @@
 |GO   |165|8|![progress](http://progressed.io/bar/8 "progress")|
 |Python |63|3|![progress](http://progressed.io/bar/3 "progress")|
 |Java |76|4|![progress](http://progressed.io/bar/4 "progress")|
-|Scala|32|2|![progress](http://progressed.io/bar/2 "progress")|
+|Scala|69|3|![progress](http://progressed.io/bar/3 "progress")|
 |CS   |1|0|![progress](http://progressed.io/bar/0 "progress")|
-|WD   |36|2|![progress](http://progressed.io/bar/2 "progress")|
-|TOTAL|397|3.970%|
+|WD   |91|5|![progress](http://progressed.io/bar/5 "progress")|
+|TOTAL|489|4.890%|
 10/02(256)
 
-10/03(141)
+10/03(233)
 
 
 # run it

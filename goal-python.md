@@ -1,6 +1,6 @@
 # Timeline
-* fibonacci(10/02)
-* maps(10/03)
+* Fibonacci (10/02)
+* Maps (10/03)
 
 
 # Goals with java language
