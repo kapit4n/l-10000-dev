@@ -1,17 +1,17 @@
 # All count
 |Language|Lines|%|%|
 |----------|-------|--------|--------|
-|JS   |157|8|![progress](http://progressed.io/bar/8 "progress")|
+|JS   |253|13|![progress](http://progressed.io/bar/13 "progress")|
 |GO   |165|8|![progress](http://progressed.io/bar/8 "progress")|
 |Python |63|3|![progress](http://progressed.io/bar/3 "progress")|
 |Java |76|4|![progress](http://progressed.io/bar/4 "progress")|
 |Scala|69|3|![progress](http://progressed.io/bar/3 "progress")|
 |CS   |1|0|![progress](http://progressed.io/bar/0 "progress")|
 |WD   |130|7|![progress](http://progressed.io/bar/7 "progress")|
-|TOTAL|661|6.610%|
+|TOTAL|757|7.570%|
 10/02(256)
 
-10/03(405)
+10/03(501)
 
 
 # run it
