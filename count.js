@@ -168,9 +168,9 @@ node ./count.js
         "|" +
         Number((y.lines / 10000) * 100 * 5).toFixed(0) +
         "|" +
-        "![progress](http://progressed.io/bar/" +
+        //"![progress](http://progressed.io/bar/" +
         Number((y.lines / 10000) * 100 * 5).toFixed(0) +
-        ' "progress")' +
+        //' "progress")' +
         "|",
       colHeaders
     );
