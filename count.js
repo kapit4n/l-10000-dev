@@ -44,8 +44,8 @@ function countFileByLanguage(srcFile, collection, displayFiles) {
 countFileByLanguage(srcFilejs, totalCountsJs);
 // countFileByLanguage(srcFileGo, totalCountsGo);
 // countFileByLanguage(srcFilePy, totalCountsPy);
-// countFileByLanguage(srcFileJava, totalCountsJava);
-// countFileByLanguage(srcFileScala, totalCountsScala);
+countFileByLanguage(srcFileJava, totalCountsJava);
+countFileByLanguage(srcFileScala, totalCountsScala);
 // countFileByLanguage(srcFileDotnet, totalCountsDotnet);
 // countFileByLanguage(srcFileWords, totalCountsWords);
 
