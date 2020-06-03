@@ -42,12 +42,12 @@ function countFileByLanguage(srcFile, collection, displayFiles) {
 }
 
 countFileByLanguage(srcFilejs, totalCountsJs);
-countFileByLanguage(srcFileGo, totalCountsGo);
-countFileByLanguage(srcFilePy, totalCountsPy);
-countFileByLanguage(srcFileJava, totalCountsJava);
-countFileByLanguage(srcFileScala, totalCountsScala);
-countFileByLanguage(srcFileDotnet, totalCountsDotnet);
-countFileByLanguage(srcFileWords, totalCountsWords);
+// countFileByLanguage(srcFileGo, totalCountsGo);
+// countFileByLanguage(srcFilePy, totalCountsPy);
+// countFileByLanguage(srcFileJava, totalCountsJava);
+// countFileByLanguage(srcFileScala, totalCountsScala);
+// countFileByLanguage(srcFileDotnet, totalCountsDotnet);
+// countFileByLanguage(srcFileWords, totalCountsWords);
 
 function writeCount(fileName, content) {
   fs.writeFile(fileName, content, function(err) {
@@ -183,12 +183,16 @@ node ./count.js
     reducedScala +
     reducedDotnet +
     reducedWords;
-  let goalPercent = Number((total / 10000) * 100).toFixed(3);
+  let countGoal = 1000;
+  let goalPercent = Number((total / countGoal) * 100).toFixed(3);
 
   countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
   console.log(countInfo);
-  let previous = 256;
-  countInfo += "\n" + "10/02(" + (256) + ")\n";
+  
+  // param to save previous
+  // read previous after it
+  let previous = 0;
+  countInfo += "\n" + "10/02(" + (previous) + ")\n";
   countInfo += "\n" + "10/03(" + (total - previous) + ")\n";
   countInfo += "\n" + run + "\n" + enfore + activity + purposes + technologies;
 
