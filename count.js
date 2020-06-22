@@ -6,6 +6,7 @@ const srcFileDotnet = "./src/dotnet";
 const srcFileWords = "./src/words";
 const srcFileGo = "./src/go";
 const srcFilePy = "./src/python";
+const srcFileSql = "./src/sql";
 
 const countLines = function(filePath, callback) {
   let i;
@@ -21,6 +22,7 @@ const countLines = function(filePath, callback) {
 var totalCountsJs = [];
 var totalCountsGo = [];
 var totalCountsPy = [];
+var totalCountsSql = [];
 var totalCountsJava = [];
 var totalCountsScala = [];
 var totalCountsDotnet = [];
@@ -44,6 +46,7 @@ function countFileByLanguage(srcFile, collection, displayFiles) {
 countFileByLanguage(srcFilejs, totalCountsJs);
 countFileByLanguage(srcFileGo, totalCountsGo);
 countFileByLanguage(srcFilePy, totalCountsPy);
+countFileByLanguage(srcFileSql, totalCountsSql);
 countFileByLanguage(srcFileJava, totalCountsJava);
 countFileByLanguage(srcFileScala, totalCountsScala);
 // countFileByLanguage(srcFileDotnet, totalCountsDotnet);
@@ -88,6 +91,13 @@ setTimeout(function() {
   result.push({
     lan: "Python ",
     lines: reducedPy
+  });
+
+  reducedSql = totalCountsSql.reduce(sumFunc, 0);
+  writeCount("sqlCount.txt", reducedSql);
+  result.push({
+    lan: "Sql ",
+    lines: reducedSql
   });
 
   reducedJava = totalCountsJava.reduce(sumFunc, 0);
@@ -179,6 +189,7 @@ node ./count.js
     reducedJs +
     reducedGo +
     reducedPy +
+    reducedSql +
     reducedJava +
     reducedScala +
     reducedDotnet +
