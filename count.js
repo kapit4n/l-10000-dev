@@ -8,7 +8,7 @@ const srcFileGo = "./src/go";
 const srcFilePy = "./src/python";
 const srcFileSql = "./src/sql";
 
-const countLines = function(filePath, callback) {
+const countLines = function (filePath, callback) {
   let i;
   let count = 0;
   fs.createReadStream(filePath)
@@ -30,36 +30,56 @@ var totalCountsWords = [];
 
 function countLinesFiles(srcFile, files, collection) {
   files.forEach(f => {
-    countLines(srcFile + "/" + f, function(err, data) {
-      collection.push(data + 1);
-    });
+    let isDirectory = false;
+    try {
+      isDirectory = fs.lstatSync(srcFile + "/" + f).isDirectory()
+    } catch (e) {
+      console.log(e);
+    }
+
+    if (isDirectory) {
+      console.log("make recursive count");
+      countFileByLanguage(srcFile + "/" + f, collection, false);
+    } else {
+      countLines(srcFile + "/" + f, function (err, data) {
+        collection.push(data + 1);
+      });
+    }
   });
 }
 
 function countFileByLanguage(srcFile, collection, displayFiles) {
   fs.readdir(srcFile, (err, files) => {
+    if (err) {
+      console.error(err);
+      return;
+    }
+
+    console.log(files);
+
     if (displayFiles) console.log("Files: " + files.join(", "));
+
     countLinesFiles(srcFile, files, collection);
   });
 }
 
-countFileByLanguage(srcFilejs, totalCountsJs);
 countFileByLanguage(srcFileGo, totalCountsGo);
-countFileByLanguage(srcFilePy, totalCountsPy);
-countFileByLanguage(srcFileSql, totalCountsSql);
-countFileByLanguage(srcFileJava, totalCountsJava);
-countFileByLanguage(srcFileScala, totalCountsScala);
+// countFileByLanguage(srcFilejs, totalCountsJs);
+// countFileByLanguage(srcFilePy, totalCountsPy);
+// countFileByLanguage(srcFileSql, totalCountsSql);
+// countFileByLanguage(srcFileJava, totalCountsJava);
+// countFileByLanguage(srcFileScala, totalCountsScala);
 // countFileByLanguage(srcFileDotnet, totalCountsDotnet);
 // countFileByLanguage(srcFileWords, totalCountsWords);
 
 function writeCount(fileName, content) {
-  fs.writeFile(fileName, content, function(err) {
+  fs.writeFile(fileName, content, function (err) {
     if (err) return console.log(error);
   });
 }
 
 function writeCountAll(fileName, content) {
-  fs.writeFile(fileName, content, function(err) {
+  fs.writeFile(fileName, content, function (err) {
     if (err) return console.log(error);
   });
 }
@@ -68,7 +88,7 @@ function sumFunc(x, y) {
   return x + y;
 }
 
-setTimeout(function() {
+setTimeout(function () {
   var result = [];
   let displayOrderd = true;
 
@@ -199,7 +219,7 @@ node ./count.js
 
   countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
   console.log(countInfo);
-  
+
   // param to save previous
   // read previous after it
   let previous = 0;
