@@ -64,13 +64,13 @@ function countFileByLanguage(srcFile, collection, displayFiles) {
 }
 
 countFileByLanguage(srcFileGo, totalCountsGo);
-// countFileByLanguage(srcFilejs, totalCountsJs);
-// countFileByLanguage(srcFilePy, totalCountsPy);
-// countFileByLanguage(srcFileSql, totalCountsSql);
-// countFileByLanguage(srcFileJava, totalCountsJava);
-// countFileByLanguage(srcFileScala, totalCountsScala);
-// countFileByLanguage(srcFileDotnet, totalCountsDotnet);
-// countFileByLanguage(srcFileWords, totalCountsWords);
+countFileByLanguage(srcFilejs, totalCountsJs);
+countFileByLanguage(srcFilePy, totalCountsPy);
+countFileByLanguage(srcFileSql, totalCountsSql);
+countFileByLanguage(srcFileJava, totalCountsJava);
+countFileByLanguage(srcFileScala, totalCountsScala);
+countFileByLanguage(srcFileDotnet, totalCountsDotnet);
+countFileByLanguage(srcFileWords, totalCountsWords);
 
 function writeCount(fileName, content) {
   fs.writeFile(fileName, content, function (err) {
