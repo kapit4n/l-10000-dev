@@ -1,5 +1,6 @@
 const fs = require("fs");
 const srcFilejs = "./src/js";
+const srcFilets = "./src/ts";
 const srcFileJava = "./src/java";
 const srcFileScala = "./src/scala";
 const srcFileDotnet = "./src/dotnet";
@@ -20,6 +21,7 @@ const countLines = function (filePath, callback) {
 };
 
 var totalCountsJs = [];
+var totalCountsTs = [];
 var totalCountsGo = [];
 var totalCountsPy = [];
 var totalCountsSql = [];
@@ -37,6 +39,15 @@ function countLinesFiles(srcFile, files, collection) {
       console.log(e);
     }
 
+    if (f === 'node_modules') return;
+    if (f === '.gitignore') return;
+    if (f === '.editorconfig') return;
+    if (f === 'karma.conf.js') return;
+    if (f === 'browserslist') return;
+    if (f === 'polyfills.ts') return;
+    if (f === 'e2e') return;
+    if (f.endsWith('.json')) return;
+    if (f.endsWith('.ico')) return;
     if (isDirectory) {
       console.log("make recursive count");
       countFileByLanguage(srcFile + "/" + f, collection, false);
@@ -65,6 +76,7 @@ function countFileByLanguage(srcFile, collection, displayFiles) {
 
 countFileByLanguage(srcFileGo, totalCountsGo);
 countFileByLanguage(srcFilejs, totalCountsJs);
+countFileByLanguage(srcFilets, totalCountsTs);
 countFileByLanguage(srcFilePy, totalCountsPy);
 countFileByLanguage(srcFileSql, totalCountsSql);
 countFileByLanguage(srcFileJava, totalCountsJava);
@@ -97,6 +109,13 @@ setTimeout(function () {
   result.push({
     lan: "JS   ",
     lines: reducedJs
+  });
+
+  reducedTs = totalCountsTs.reduce(sumFunc, 0);
+  writeCount("tsCount.txt", reducedTs);
+  result.push({
+    lan: "TS   ",
+    lines: reducedTs
   });
 
   reducedGo = totalCountsGo.reduce(sumFunc, 0);
@@ -207,6 +226,7 @@ node ./count.js
 
   let total =
     reducedJs +
+    reducedTs +
     reducedGo +
     reducedPy +
     reducedSql +
