@@ -7,6 +7,7 @@ const srcFileDotnet = "./src/dotnet";
 const srcFileWords = "./src/words";
 const srcFileGo = "./src/go";
 const srcFilePy = "./src/python";
+const srcFileRb = "./src/ruby";
 const srcFileSql = "./src/sql";
 
 const countLines = function (filePath, callback) {
@@ -24,6 +25,7 @@ var totalCountsJs = [];
 var totalCountsTs = [];
 var totalCountsGo = [];
 var totalCountsPy = [];
+var totalCountsRb = [];
 var totalCountsSql = [];
 var totalCountsJava = [];
 var totalCountsScala = [];
@@ -78,6 +80,7 @@ countFileByLanguage(srcFileGo, totalCountsGo);
 countFileByLanguage(srcFilejs, totalCountsJs);
 countFileByLanguage(srcFilets, totalCountsTs);
 countFileByLanguage(srcFilePy, totalCountsPy);
+countFileByLanguage(srcFileRb, totalCountsRb);
 countFileByLanguage(srcFileSql, totalCountsSql);
 countFileByLanguage(srcFileJava, totalCountsJava);
 countFileByLanguage(srcFileScala, totalCountsScala);
@@ -130,6 +133,13 @@ setTimeout(function () {
   result.push({
     lan: "Python ",
     lines: reducedPy
+  });
+  
+  reducedRb = totalCountsRb.reduce(sumFunc, 0);
+  writeCount("RbCount.txt", reducedRb);
+  result.push({
+    lan: "Ruby",
+    lines: reducedRb
   });
 
   reducedSql = totalCountsSql.reduce(sumFunc, 0);
@@ -229,6 +239,7 @@ node ./count.js
     reducedTs +
     reducedGo +
     reducedPy +
+    reducedRb +
     reducedSql +
     reducedJava +
     reducedScala +
