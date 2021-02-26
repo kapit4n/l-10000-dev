@@ -3,4 +3,9 @@
 * 
 
 # Goals with javascript
-- ui frameworks(angular, react and vue)
+- react js
+- angular js
+- vue js
+- websockets
+- node js
+- 

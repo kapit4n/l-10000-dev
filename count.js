@@ -88,13 +88,13 @@ countFileByLanguage(srcFileDotnet, totalCountsDotnet);
 countFileByLanguage(srcFileWords, totalCountsWords);
 
 function writeCount(fileName, content) {
-  fs.appendFile(fileName, content + "\n", function (err) {
+  fs.appendFile(fileName, content + " " + new Date().toISOString()  + "\n", function (err) {
     if (err) return console.log(error);
   });
 }
 
 function writeCountAll(fileName, content) {
-  fs.appendFile(fileName, content + "\n", function (err) {
+  fs.appendFile(fileName, content + " " + new Date().toISOString()  + "\n", function (err) {
     if (err) return console.log(error);
   });
 }

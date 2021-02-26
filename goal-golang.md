@@ -3,6 +3,8 @@
 
 
 # Goals with java language
+- language principles
+- goroutines
 - machine learning
 
 ## algorithms

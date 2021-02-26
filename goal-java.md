@@ -4,6 +4,10 @@
 
 # Goals with java language
 - services
+- framweorks
+- apis
+- desktop systems
+
 
 ## algorithms
 - 
