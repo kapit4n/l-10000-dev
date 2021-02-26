@@ -1,5 +1,6 @@
 const fs = require("fs");
 const readline = require('readline')
+const nodeHtmlToImage = require('node-html-to-image')
 
 const srcFilejs = "./src/js";
 const srcFilets = "./src/ts";
@@ -116,16 +117,16 @@ function buildCharts(title, file) {
     crlfDelay: Infinity
   });
 
- readInterface.on('line', (line) => { 
-   const values = line.split(",")
-   valuesData += values[0] + ","
-   labelDates += '"' + values[1].trim() + '",'
+  readInterface.on('line', (line) => {
+    const values = line.split(",")
+    valuesData += values[0] + ","
+    labelDates += '"' + values[1].trim() + '",'
   })
 
   readInterface.on('close', () => {
 
     valuesData += "]"
-   labelDates += ']'
+    labelDates += ']'
     fileText = `
       <!DOCTYPE HTML>
       <html>
@@ -154,7 +155,15 @@ function buildCharts(title, file) {
       </body>
       </html>  
       `;
-  
+
+
+    nodeHtmlToImage({
+      output: `./${title}.png`,
+      html: fileText,
+      content: { name: title }
+    })
+      .then(() => console.log('The image was created successfully!'))
+
     fs.writeFileSync(title + ".html", fileText)
   })
 }
