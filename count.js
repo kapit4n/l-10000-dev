@@ -88,13 +88,13 @@ countFileByLanguage(srcFileDotnet, totalCountsDotnet);
 countFileByLanguage(srcFileWords, totalCountsWords);
 
 function writeCount(fileName, content) {
-  fs.writeFile(fileName, content, function (err) {
+  fs.appendFile(fileName, content + "\n", function (err) {
     if (err) return console.log(error);
   });
 }
 
 function writeCountAll(fileName, content) {
-  fs.writeFile(fileName, content, function (err) {
+  fs.appendFile(fileName, content + "\n", function (err) {
     if (err) return console.log(error);
   });
 }
@@ -250,6 +250,8 @@ node ./count.js
 
   countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
   console.log(countInfo);
+
+  writeCountAll('total.txt', total)
 
   // param to save previous
   // read previous after it

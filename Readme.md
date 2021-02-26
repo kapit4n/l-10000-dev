@@ -5,16 +5,16 @@
 |JS   |1822|91|91|
 |Python |1149|57|57|
 |TS   |829|41|41|
-|Ruby|809|40|40|
+|Ruby|810|41|41|
 |Java |731|37|37|
 |Scala|643|32|32|
 |Sql |9|0|0|
 |CS   |0|0|0|
 |WD   |0|0|0|
-|TOTAL|7974|797.400%|
+|TOTAL|7975|797.500%|
 10/02(0)
 
-10/03(7974)
+10/03(7975)
 
 
 # run it
@@ -37,3 +37,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
+
