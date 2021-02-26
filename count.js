@@ -1,4 +1,6 @@
 const fs = require("fs");
+const readline = require('readline')
+
 const srcFilejs = "./src/js";
 const srcFilets = "./src/ts";
 const srcFileJava = "./src/java";
@@ -88,19 +90,73 @@ countFileByLanguage(srcFileDotnet, totalCountsDotnet);
 countFileByLanguage(srcFileWords, totalCountsWords);
 
 function writeCount(fileName, content) {
-  fs.appendFile(fileName, content + " " + new Date().toISOString()  + "\n", function (err) {
+  fs.appendFile(fileName, content + ", " + new Date().toISOString() + "\n", function (err) {
     if (err) return console.log(error);
   });
 }
 
 function writeCountAll(fileName, content) {
-  fs.appendFile(fileName, content + " " + new Date().toISOString()  + "\n", function (err) {
+  fs.appendFile(fileName, content + ", " + new Date().toISOString() + "\n", function (err) {
     if (err) return console.log(error);
   });
 }
 
 function sumFunc(x, y) {
   return x + y;
+}
+
+function buildCharts(title, file) {
+
+  var fileText = "";
+  var labelDates = '[';
+  var valuesData = '[';
+  const fileStream = fs.createReadStream(file);
+  const readInterface = readline.createInterface({
+    input: fileStream,
+    crlfDelay: Infinity
+  });
+
+ readInterface.on('line', (line) => { 
+   const values = line.split(",")
+   valuesData += values[0] + ","
+   labelDates += '"' + values[1].trim() + '",'
+  })
+
+  readInterface.on('close', () => {
+
+    valuesData += "]"
+   labelDates += ']'
+    fileText = `
+      <!DOCTYPE HTML>
+      <html>
+      <head></head>
+      <body>
+        <div style="width: 500px;">
+          <canvas id="${title}" width="500" height="500"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+          var ctx = document.getElementById("${title}").getContext("2d");
+          const goLabelsDates = ${labelDates};
+          var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1) + "-" + new Date(x).getFullYear()),
+              datasets: [{
+                label: '${title} Progress',
+                backgroundColor: 'rgb(255, 0, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: ${valuesData}
+              }]
+            },
+          });
+        </script>
+      </body>
+      </html>  
+      `;
+  
+    fs.writeFileSync(title + ".html", fileText)
+  })
 }
 
 setTimeout(function () {
@@ -134,7 +190,7 @@ setTimeout(function () {
     lan: "Python ",
     lines: reducedPy
   });
-  
+
   reducedRb = totalCountsRb.reduce(sumFunc, 0);
   writeCount("RbCount.txt", reducedRb);
   result.push({
@@ -261,4 +317,15 @@ node ./count.js
   countInfo += "\n" + run + "\n" + enfore + activity + purposes + technologies;
 
   writeCount("Readme.md", countInfo);
+  buildCharts("golang", "./goCount.txt");
+  buildCharts("python", "./pyCount.txt");
+  buildCharts("java", "./javaCount.txt");
+  buildCharts("js", "./jsCount.txt");
+  buildCharts("scala", "./scalaCount.txt");
+  buildCharts("ruby", "./RbCount.txt");
+  buildCharts("ts", "./tsCount.txt");
+  buildCharts("total", "./total.txt");
+  buildCharts("dotnet", "./dotnetCount.txt");
+  buildCharts("sql", "./sqlCount.txt");
+
 }, 5000);

@@ -1,0 +1,28 @@
+
+      <!DOCTYPE HTML>
+      <html>
+      <head></head>
+      <body>
+        <div style="width: 500px;">
+          <canvas id="golang" width="500" height="500"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+          var ctx = document.getElementById("golang").getContext("2d");
+          const goLabelsDates = ["2020-06-26T18:46:34.523Z1982",];
+          var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1) + "-" + new Date(x).getFullYear()),
+              datasets: [{
+                label: 'golang Progress',
+                backgroundColor: 'rgb(255, 0, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0,]
+              }]
+            },
+          });
+        </script>
+      </body>
+      </html>  
+      
