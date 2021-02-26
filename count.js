@@ -105,7 +105,7 @@ function sumFunc(x, y) {
 
 setTimeout(function () {
   var result = [];
-  let displayOrderd = true;
+  let displayOrdered = true;
 
   reducedJs = totalCountsJs.reduce(sumFunc, 0);
   writeCount("jsCount.txt", reducedJs);
@@ -178,8 +178,8 @@ setTimeout(function () {
     lines: reducedWords
   });
 
-  if (displayOrderd) {
-    result.sort((a, b) => a.lines > b.lines);
+  if (displayOrdered) {
+    result = result.sort((a, b) => b.lines - a.lines);
   }
 
   let run = `
