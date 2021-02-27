@@ -4,21 +4,21 @@
       <head></head>
       <body>
         <div style="width: 500px;">
-          <canvas id="total" width="500" height="500"></canvas>
+          <canvas id="ruby" width="500" height="500"></canvas>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
-          var ctx = document.getElementById("total").getContext("2d");
-          const goLabelsDates = ["2021-02-27T01:37:43.112Z","2021-02-27T01:38:01.628Z",];
+          var ctx = document.getElementById("ruby").getContext("2d");
+          const goLabelsDates = ["2021-02-27T01:37:43.111Z","2021-02-27T01:38:01.627Z",];
           var chart = new Chart(ctx, {
             type: 'line',
             data: {
               labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1) + "-" + new Date(x).getFullYear()),
               datasets: [{
-                label: 'total Progress',
+                label: 'ruby Progress',
                 backgroundColor: 'rgb(255, 0, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [7975,7975,]
+                data: [810,810,]
               }]
             },
           });
