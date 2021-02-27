@@ -2,118 +2,77 @@ const fs = require("fs");
 const readline = require('readline')
 const nodeHtmlToImage = require('node-html-to-image')
 
+const srcRoot = './src';
 
+const configLn = [
+  {
+    ln: 'js',
+    title: "JavaScript"
+  },
+  {
+    ln: 'ts',
+    title: "TS"
+  },
 
-const srcFilejs = "./src/js";
-const srcFilets = "./src/ts";
-const srcFileJava = "./src/java";
-const srcFileScala = "./src/scala";
-const srcFileDotnet = "./src/dotnet";
-const srcFileWords = "./src/words";
-const srcFileGo = "./src/go";
-const srcFilePy = "./src/python";
-const srcFileRb = "./src/ruby";
-const srcFileSql = "./src/sql";
+  {
+    ln: 'java',
+    title: "java"
+  },
+  {
+    ln: 'scala',
+    title: "scala"
+  },
+  {
+    ln: 'dotnet',
+    title: "dotnet"
+  },
+  {
+    ln: 'words',
+    title: "words"
+  },
+  {
+    ln: 'go',
+    title: "go"
+  },
+  {
+    ln: 'python',
+    title: "python"
+  },
+  {
+    ln: 'ruby',
+    title: "ruby"
+  },
+  {
+    ln: 'sql',
+    title: "sql"
+  },
+]
 
+let totals = {};
 
-var totalCountsJs = [];
-var totalCountsTs = [];
-var totalCountsGo = [];
-var totalCountsPy = [];
-var totalCountsRb = [];
-var totalCountsSql = [];
-var totalCountsJava = [];
-var totalCountsScala = [];
-var totalCountsDotnet = [];
-var totalCountsWords = [];
+configLn.forEach(ln => {
+  totals[ln.ln] = [];
+})
 
-
-countFileByLanguage(srcFileGo, totalCountsGo);
-countFileByLanguage(srcFilejs, totalCountsJs);
-countFileByLanguage(srcFilets, totalCountsTs);
-countFileByLanguage(srcFilePy, totalCountsPy);
-countFileByLanguage(srcFileRb, totalCountsRb);
-countFileByLanguage(srcFileSql, totalCountsSql);
-countFileByLanguage(srcFileJava, totalCountsJava);
-countFileByLanguage(srcFileScala, totalCountsScala);
-countFileByLanguage(srcFileDotnet, totalCountsDotnet);
-countFileByLanguage(srcFileWords, totalCountsWords);
+configLn.forEach(ln => {
+  countFileByLanguage(srcRoot + "/" + ln.ln, totals[ln.ln]);
+})
 
 
 setTimeout(function () {
   var result = [];
   let displayOrdered = true;
 
-  reducedJs = totalCountsJs.reduce(sumFunc, 0);
-  writeCount("jsCount.txt", reducedJs);
-  result.push({
-    lan: "JS   ",
-    lines: reducedJs
-  });
+  reduced = {}
 
-  reducedTs = totalCountsTs.reduce(sumFunc, 0);
-  writeCount("tsCount.txt", reducedTs);
-  result.push({
-    lan: "TS   ",
-    lines: reducedTs
-  });
-
-  reducedGo = totalCountsGo.reduce(sumFunc, 0);
-  writeCount("goCount.txt", reducedGo);
-  result.push({
-    lan: "GO   ",
-    lines: reducedGo
-  });
-
-  reducedPy = totalCountsPy.reduce(sumFunc, 0);
-  writeCount("pyCount.txt", reducedPy);
-  result.push({
-    lan: "Python ",
-    lines: reducedPy
-  });
-
-  reducedRb = totalCountsRb.reduce(sumFunc, 0);
-  writeCount("RbCount.txt", reducedRb);
-  result.push({
-    lan: "Ruby",
-    lines: reducedRb
-  });
-
-  reducedSql = totalCountsSql.reduce(sumFunc, 0);
-  writeCount("sqlCount.txt", reducedSql);
-  result.push({
-    lan: "Sql ",
-    lines: reducedSql
-  });
-
-  reducedJava = totalCountsJava.reduce(sumFunc, 0);
-  writeCount("javaCount.txt", reducedJava);
-
-  result.push({
-    lan: "Java ",
-    lines: reducedJava
-  });
-
-  reducedScala = totalCountsScala.reduce(sumFunc, 0);
-  writeCount("scalaCount.txt", reducedScala);
-  result.push({
-    lan: "Scala",
-    lines: reducedScala
-  });
-
-  reducedDotnet = totalCountsDotnet.reduce(sumFunc, 0);
-  writeCount("dotnetCount.txt", reducedDotnet);
-  result.push({
-    lan: "CS   ",
-    lines: reducedDotnet
-  });
-
-  reducedWords = totalCountsWords.reduce(sumFunc, 0);
-  writeCount("wordsCount.txt", reducedWords);
-  result.push({
-    lan: "WD   ",
-    lines: reducedWords
-  });
+  configLn.forEach(ln => {
+    reduced[ln.ln] = totals[ln.ln].reduce(sumFunc, 0)
+    writeCount(ln.ln + ".txt", reduced[ln.ln]);
+    result.push({
+      lan: ln.ln,
+      lines: reduced[ln.ln]
+    });
+  })
 
   if (displayOrdered) {
     result = result.sort((a, b) => b.lines - a.lines);
@@ -171,17 +130,12 @@ node ./count.js
       colHeaders
     );
 
-  let total =
-    reducedJs +
-    reducedTs +
-    reducedGo +
-    reducedPy +
-    reducedRb +
-    reducedSql +
-    reducedJava +
-    reducedScala +
-    reducedDotnet +
-    reducedWords;
+  let total = 0;
+
+  configLn.forEach(ln => {
+    total += reduced[ln.ln]
+  })
+
   let countGoal = 1000;
   let goalPercent = Number((total / countGoal) * 100).toFixed(3);
 
