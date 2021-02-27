@@ -152,17 +152,11 @@ node ./count.js
   countInfo += "\n" + run + "\n" + enfore + activity + purposes + technologies;
 
   writeCount("Readme.md", countInfo);
-  buildCharts("golang", "./goCount.txt");
-  buildCharts("python", "./pyCount.txt");
-  buildCharts("java", "./javaCount.txt");
-  buildCharts("js", "./jsCount.txt");
-  buildCharts("scala", "./scalaCount.txt");
-  buildCharts("ruby", "./RbCount.txt");
-  buildCharts("ts", "./tsCount.txt");
-  buildCharts("total", "./total.txt");
-  buildCharts("dotnet", "./dotnetCount.txt");
-  buildCharts("sql", "./sqlCount.txt");
 
+  configLn.forEach(ln => {
+    buildCharts(ln.ln, ln.ln + ".txt")
+  })
+  buildCharts("total", "./total.txt");
 }, 5000);
 
 
