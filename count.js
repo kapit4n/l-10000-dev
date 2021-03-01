@@ -167,7 +167,7 @@ function writeCount(fileName, content) {
 }
 
 function writeCountAll(fileName, content) {
-  fs.appendFile(fileName, content + ", " + new Date().toISOString() + "\n", function (err) {
+  fs.writeFile(fileName, content + ", " + new Date().toISOString() + "\n", function (err) {
     if (err) return console.log(error);
   });
 }
