@@ -123,9 +123,9 @@ node ./count.js
         "|" +
         Number((y.lines / 10000) * 100 * 5).toFixed(0) +
         "|" +
-        //"![progress](http://progressed.io/bar/" +
         Number((y.lines / 10000) * 100 * 5).toFixed(0) +
-        //' "progress")' +
+        "|" +
+        `![${x}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${x}.png)` +
         "|",
       colHeaders
     );
