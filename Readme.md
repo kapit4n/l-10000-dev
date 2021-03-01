@@ -1,7 +1,7 @@
 # All count
-|Language|Lines|%|%|
-|----------|-------|--------|--------|
-|go|2201|110|110|
+|Language|Lines|%|%|Img|
+|----------|-------|--------|--------|--------|
+|go|2201|110|110|![Home](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|
 |js|1822|91|91|
 |python|1149|57|57|
 |scala|975|49|49|
