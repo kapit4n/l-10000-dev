@@ -17,7 +17,7 @@
 10/03(8573)
 
 
-# run it
+# run it 2
 node ./count.js
     
 # Enforce
