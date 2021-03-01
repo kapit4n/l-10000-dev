@@ -108,8 +108,8 @@ node ./count.js
 * Scala, Java
 `;
 
-  let colHeaders = "\n|Language" + "|Lines" + "|" + "%|" + "%|";
-  colHeaders += "\n|----------|-------|--------|--------|";
+  let colHeaders = "\n|Language" + "|Lines" + "|" + "%|" + "%|" + "%|";
+  colHeaders += "\n|----------|-------|--------|--------|--------|";
   let countInfo =
     "# All count" +
     result.reduce(
@@ -125,7 +125,7 @@ node ./count.js
         "|" +
         Number((y.lines / 10000) * 100 * 5).toFixed(0) +
         "|" +
-        `![${x}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${x}.png)` +
+        `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
         "|",
       colHeaders
     );

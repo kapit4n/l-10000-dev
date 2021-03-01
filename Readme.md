@@ -1,6 +1,6 @@
 # All count
-|Language|Lines|%|%|
-|----------|-------|--------|--------|
+|Language|Lines|%|%|%|
+|----------|-------|--------|--------|--------|
 |go|2201|110|110|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|
 |js|1822|91|91|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|
 |python|1149|57|57|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|
@@ -17,7 +17,7 @@
 10/03(8573)
 
 
-# run it 2
+# run it
 node ./count.js
     
 # Enforce
@@ -37,4 +37,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-03-01T16:00:06.410Z
+, 2021-03-01T16:02:27.765Z
