@@ -67,7 +67,7 @@ setTimeout(function () {
 
   configLn.forEach(ln => {
     reduced[ln.ln] = totals[ln.ln].reduce(sumFunc, 0)
-    writeCount(ln.ln + ".txt", reduced[ln.ln]);
+    appendFile(ln.ln + ".txt", reduced[ln.ln]);
     result.push({
       lan: ln.ln,
       lines: reduced[ln.ln]
@@ -151,7 +151,7 @@ node ./count.js
   countInfo += "\n" + "10/03(" + (total - previous) + ")\n";
   countInfo += "\n" + run + "\n" + enfore + activity + purposes + technologies;
 
-  writeCount("Readme.md", countInfo);
+  writeFile("Readme.md", countInfo);
 
   configLn.forEach(ln => {
     buildCharts(ln.ln, ln.ln + ".txt")
@@ -160,14 +160,20 @@ node ./count.js
 }, 5000);
 
 
-function writeCount(fileName, content) {
+function appendFile(fileName, content) {
   fs.appendFile(fileName, content + ", " + new Date().toISOString() + "\n", function (err) {
     if (err) return console.log(error);
   });
 }
 
-function writeCountAll(fileName, content) {
+function writeFile(fileName, content) {
   fs.writeFile(fileName, content + ", " + new Date().toISOString() + "\n", function (err) {
+    if (err) return console.log(error);
+  });
+}
+
+function writeCountAll(fileName, content) {
+  fs.appendFile(fileName, content + ", " + new Date().toISOString() + "\n", function (err) {
     if (err) return console.log(error);
   });
 }
