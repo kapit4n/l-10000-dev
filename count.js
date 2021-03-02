@@ -264,7 +264,7 @@ function buildCharts(title, file) {
       <head></head>
       <body>
         <div style="width: 500px;">
-          <canvas id="${title}" width="500" height="500"></canvas>
+          <canvas id="${title}" width="500" height="300"></canvas>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
