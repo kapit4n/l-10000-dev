@@ -4,12 +4,12 @@
       <head></head>
       <body>
         <div style="width: 500px;">
-          <canvas id="total" width="500" height="500"></canvas>
+          <canvas id="total" width="500" height="300"></canvas>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
           var ctx = document.getElementById("total").getContext("2d");
-          const goLabelsDates = ["2021-02-27T01:37:43.112Z","2021-02-27T01:38:01.628Z","2021-03-01T13:41:18.753Z","2021-03-01T14:53:41.991Z","2021-03-01T15:08:00.851Z","2021-03-01T15:09:10.635Z","2021-03-01T15:22:55.385Z",];
+          const goLabelsDates = ["2021-02-27T01:37:43.112Z","2021-02-27T01:38:01.628Z","2021-03-01T13:41:18.753Z","2021-03-01T14:53:41.991Z","2021-03-01T15:08:00.851Z","2021-03-01T15:09:10.635Z","2021-03-01T15:22:55.385Z","2021-03-03T15:31:41.151Z",];
           var chart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -18,7 +18,7 @@
                 label: 'total Progress',
                 backgroundColor: 'rgb(255, 0, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [7975,7975,8307,8526,8526,8527,8573,]
+                data: [7975,7975,8307,8526,8526,8527,8573,9171,]
               }]
             },
           });
