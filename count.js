@@ -7,44 +7,58 @@ const srcRoot = './src';
 const configLn = [
   {
     ln: 'js',
-    title: "JavaScript"
+    title: "JavaScript",
+    subjects: [
+      "react, ", "angular, "
+    ]
   },
   {
     ln: 'ts',
-    title: "TS"
+    title: "TS",
+    subjects: [
+      "angular"
+    ]
   },
 
   {
     ln: 'java',
-    title: "java"
+    title: "java",
+    subjects: ["reflexion", "strings", "generics", "documentation"]
   },
   {
     ln: 'scala',
-    title: "scala"
+    title: "scala",
+    subjects: ["play framework", "akka", "collections"]
   },
   {
     ln: 'dotnet',
-    title: "dotnet"
+    title: "dotnet",
+    subjects: []
   },
   {
     ln: 'words',
-    title: "words"
+    title: "words",
+    subjects: []
   },
   {
     ln: 'go',
-    title: "go"
+    title: "go",
+    subjects: ["structs", "loops"]
   },
   {
     ln: 'python',
-    title: "python"
+    title: "python",
+    subjects: ["collections", ""]
   },
   {
     ln: 'ruby',
-    title: "ruby"
+    title: "ruby",
+    subjects: []
   },
   {
     ln: 'sql',
-    title: "sql"
+    title: "sql",
+    subjects: []
   },
 ]
 
@@ -108,8 +122,8 @@ node ./count.js
 * Scala, Java
 `;
 
-  let colHeaders = "\n|Language" + "|Lines" + "|" + "%|" + "%|" + "%|";
-  colHeaders += "\n|----------|-------|--------|--------|--------|";
+  let colHeaders = "\n|Language" + "|Lines" + "|" + "%|" + "%|" + "%|" + "%|";
+  colHeaders += "\n|----------|-------|--------|--------|--------|--------|";
   let countInfo =
     "# All count" +
     result.reduce(
@@ -126,6 +140,8 @@ node ./count.js
         Number((y.lines / 10000) * 100 * 5).toFixed(0) +
         "|" +
         `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
+        "|" +
+        `${configLn.find(l => l.ln == y.lan).subjects.join(",")}` +
         "|",
       colHeaders
     );
