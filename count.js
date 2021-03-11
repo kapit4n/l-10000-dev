@@ -141,7 +141,7 @@ node ./count.js
         "|" +
         `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
         "|" +
-        `${configLn.find(l => l.ln == y.lan).subjects.join(",")}` +
+        `${configLn.find(l => l.ln == y.lan).subjects.join(", ")}` +
         "|",
       colHeaders
     );
