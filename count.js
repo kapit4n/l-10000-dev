@@ -53,7 +53,7 @@ const configLn = [
   {
     ln: 'ruby',
     title: "ruby",
-    subjects: []
+    subjects: ["migrations", "ruby on rails", "presenters", "models"]
   },
   {
     ln: 'sql',
