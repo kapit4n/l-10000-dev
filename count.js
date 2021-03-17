@@ -9,14 +9,14 @@ const configLn = [
     ln: 'js',
     title: "JavaScript",
     subjects: [
-      "react, ", "angular, "
+      "react, ", "angular, sequelize, mongoose, prisma, node js."
     ]
   },
   {
     ln: 'ts',
     title: "TS",
     subjects: [
-      "angular"
+      "angular, microORM, typeORM, node js."
     ]
   },
 
