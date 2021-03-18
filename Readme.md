@@ -8,14 +8,14 @@
 |scala|1541|77|77|![scala](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/scala.png)|play framework, akka, collections|
 |java|1265|63|63|![java](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/java.png)|reflexion, strings, generics, documentation|
 |ts|945|47|47|![ts](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ts.png)|angular, microORM, typeORM, node js.|
-|denti-code|240|12|12|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|
+|denti-code|287|14|14|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|
 |words|57|3|3|![words](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/words.png)||
 |sql|9|0|0|![sql](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/sql.png)||
 |dotnet|0|0|0|![dotnet](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/dotnet.png)||
-|TOTAL|12906|1290.600%|
+|TOTAL|12953|1295.300%|
 10/02(0)
 
-10/03(12906)
+10/03(12953)
 
 
 # run it
@@ -38,4 +38,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-03-18T05:10:54.428Z
+, 2021-03-18T05:44:13.725Z
