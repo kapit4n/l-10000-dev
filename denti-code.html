@@ -1,0 +1,28 @@
+
+      <!DOCTYPE HTML>
+      <html>
+      <head></head>
+      <body>
+        <div style="width: 500px;">
+          <canvas id="denti-code" width="500" height="300"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+          var ctx = document.getElementById("denti-code").getContext("2d");
+          const goLabelsDates = ["2021-03-18T03:42:56.996Z","2021-03-18T03:48:46.006Z",];
+          var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1) + "-" + new Date(x).getFullYear()),
+              datasets: [{
+                label: 'denti-code Progress',
+                backgroundColor: 'rgb(255, 0, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [0,169,]
+              }]
+            },
+          });
+        </script>
+      </body>
+      </html>  
+      
