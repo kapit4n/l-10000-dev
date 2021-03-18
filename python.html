@@ -9,16 +9,16 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
           var ctx = document.getElementById("python").getContext("2d");
-          const goLabelsDates = ["2021-02-27T01:37:43.111Z","2021-02-27T01:38:01.627Z","2021-03-03T15:31:41.151Z","2021-03-18T05:44:13.724Z",];
+          const goLabelsDates = ["2021-02-27T01:37:43.111Z","2021-02-27T01:38:01.627Z","2021-03-03T15:31:41.151Z","2021-03-18T05:44:13.724Z","2021-03-18T05:56:11.032Z",];
           var chart = new Chart(ctx, {
             type: 'line',
             data: {
-              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1) + "-" + new Date(x).getFullYear()),
+              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1)),
               datasets: [{
                 label: 'python Progress',
                 backgroundColor: 'rgb(255, 0, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [1149,1149,1501,1581,]
+                data: [1149,1149,1501,1581,1581,]
               }]
             },
           });

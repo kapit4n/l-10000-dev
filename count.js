@@ -302,7 +302,7 @@ function buildCharts(title, file) {
           var chart = new Chart(ctx, {
             type: 'line',
             data: {
-              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1) + "-" + new Date(x).getFullYear()),
+              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1)),
               datasets: [{
                 label: '${title} Progress',
                 backgroundColor: 'rgb(255, 0, 132)',
