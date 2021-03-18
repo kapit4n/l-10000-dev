@@ -6,6 +6,14 @@ const srcRoot = './src';
 
 const configLn = [
   {
+    ln: 'denti-code',
+    title: "JavaScript Denti",
+    subjects: [
+      "react,", "hooks"
+    ],
+    src: ['../../node/denti-code/ui/src']
+  },
+   {
     ln: 'js',
     title: "JavaScript",
     subjects: [
@@ -19,7 +27,6 @@ const configLn = [
       "angular, microORM, typeORM, node js."
     ]
   },
-
   {
     ln: 'java',
     title: "java",
@@ -69,7 +76,13 @@ configLn.forEach(ln => {
 })
 
 configLn.forEach(ln => {
-  countFileByLanguage(srcRoot + "/" + ln.ln, totals[ln.ln]);
+  if (ln.src && ln.src.length > 0) {
+    ln.src.forEach(fil => {
+      countFileByLanguage(fil, totals[ln.ln]);  
+    })
+  } else {
+    countFileByLanguage(srcRoot + "/" + ln.ln, totals[ln.ln]);
+  }
 })
 
 
