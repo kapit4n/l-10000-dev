@@ -4,12 +4,12 @@
       <head></head>
       <body>
         <div style="width: 500px;">
-          <canvas id="words" width="500" height="500"></canvas>
+          <canvas id="words" width="500" height="300"></canvas>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
           var ctx = document.getElementById("words").getContext("2d");
-          const goLabelsDates = ["2021-02-27T01:37:43.111Z","2021-02-27T01:38:01.627Z","2021-03-01T14:53:41.990Z","2021-03-01T15:08:00.850Z","2021-03-01T15:09:10.634Z","2021-03-01T15:22:55.385Z",];
+          const goLabelsDates = ["2021-02-27T01:37:43.111Z","2021-02-27T01:38:01.627Z","2021-03-01T14:53:41.990Z","2021-03-01T15:08:00.850Z","2021-03-01T15:09:10.634Z","2021-03-01T15:22:55.385Z","2021-03-18T05:44:13.723Z",];
           var chart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -18,7 +18,7 @@
                 label: 'words Progress',
                 backgroundColor: 'rgb(255, 0, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [0,0,0,0,1,47,]
+                data: [0,0,0,0,1,47,57,]
               }]
             },
           });
