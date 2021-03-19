@@ -11,7 +11,7 @@ const configLn = [
     subjects: [
       "react,", "hooks"
     ],
-    src: ['../../node/denti-code/ui/src']
+    src: ['../../node/denti-code/ui/src', '../../node/denti-code/server']
   },
    {
     ln: 'js',
