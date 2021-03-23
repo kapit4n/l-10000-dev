@@ -2,8 +2,8 @@
 |Language|Lines|%|%|%|%|
 |----------|-------|--------|--------|--------|--------|
 |js|3104|155|155|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|
-|go|2307|115|115|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
-|ruby|1938|97|97|![ruby](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ruby.png)|migrations, ruby on rails, presenters, models|
+|go|2337|117|117|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
+|ruby|1960|98|98|![ruby](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ruby.png)|migrations, ruby on rails, presenters, models|
 |python|1581|79|79|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |
 |scala|1541|77|77|![scala](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/scala.png)|play framework, akka, collections|
 |java|1265|63|63|![java](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/java.png)|reflexion, strings, generics, documentation|
@@ -12,10 +12,10 @@
 |words|57|3|3|![words](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/words.png)||
 |sql|9|0|0|![sql](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/sql.png)||
 |dotnet|0|0|0|![dotnet](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/dotnet.png)||
-|TOTAL|13354|1335.400%|
+|TOTAL|13406|1340.600%|
 10/02(0)
 
-10/03(13354)
+10/03(13406)
 
 
 # run it
@@ -38,4 +38,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-03-22T13:51:43.977Z
+, 2021-03-23T01:52:09.452Z
