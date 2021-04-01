@@ -1,7 +1,7 @@
 # All count
 |Language|Lines|%|%|%|%|
 |----------|-------|--------|--------|--------|--------|
-|js|3287|164|164|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|
+|js|4328|216|216|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|
 |go|2337|117|117|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
 |ruby|2083|104|104|![ruby](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ruby.png)|migrations, ruby on rails, presenters, models|
 |python|1581|79|79|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |
@@ -12,10 +12,10 @@
 |sql|131|7|7|![sql](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/sql.png)||
 |words|57|3|3|![words](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/words.png)||
 |dotnet|0|0|0|![dotnet](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/dotnet.png)||
-|TOTAL|13845|1384.500%|
+|TOTAL|14886|1488.600%|
 10/02(0)
 
-10/03(13845)
+10/03(14886)
 
 
 # run it
@@ -38,4 +38,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-04-01T15:03:17.764Z
+, 2021-04-01T23:15:02.096Z
