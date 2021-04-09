@@ -165,7 +165,7 @@ node ./count.js
     total += reduced[ln.ln]
   })
 
-  let countGoal = 1000;
+  let countGoal = 10000;
   let goalPercent = Number((total / countGoal) * 100).toFixed(3);
 
   countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
