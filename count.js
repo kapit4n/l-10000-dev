@@ -148,9 +148,9 @@ node ./count.js
         y.lines +
         "" +
         "|" +
-        Number((y.lines / 10000) * 100 * 5).toFixed(0) +
+        Number((y.lines / 100000) * 100 * 5).toFixed(0) +
         "|" +
-        Number((y.lines / 10000) * 100 * 5).toFixed(0) +
+        Number((y.lines / 100000) * 100 * 5).toFixed(0) +
         "|" +
         `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
         "|" +
@@ -165,7 +165,7 @@ node ./count.js
     total += reduced[ln.ln]
   })
 
-  let countGoal = 10000;
+  let countGoal = 100000;
   let goalPercent = Number((total / countGoal) * 100).toFixed(3);
 
   countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
