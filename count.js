@@ -67,6 +67,16 @@ const configLn = [
     title: "sql",
     subjects: []
   },
+  {
+    ln: 'html',
+    title: "html",
+    subjects: []
+  },
+  {
+    ln: 'css',
+    title: "css",
+    subjects: []
+  },
 ]
 
 let totals = {};

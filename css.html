@@ -1,0 +1,28 @@
+
+      <!DOCTYPE HTML>
+      <html>
+      <head></head>
+      <body>
+        <div style="width: 500px;">
+          <canvas id="css" width="500" height="300"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+          var ctx = document.getElementById("css").getContext("2d");
+          const goLabelsDates = ["2021-04-16T17:00:53.733Z","2021-04-16T23:14:36.282Z","2021-04-17T00:39:16.889Z","2021-04-17T01:11:09.985Z","2021-04-17T01:32:30.008Z","2021-04-17T01:44:22.445Z","2021-04-17T01:44:33.940Z","2021-04-17T02:35:55.773Z",];
+          var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1)),
+              datasets: [{
+                label: 'css Progress',
+                backgroundColor: 'rgb(255, 0, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [12,12,12,12,12,12,12,12,]
+              }]
+            },
+          });
+        </script>
+      </body>
+      </html>  
+      
