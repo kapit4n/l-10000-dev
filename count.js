@@ -126,7 +126,12 @@ setTimeout(function () {
   })
 
   if (displayOrdered) {
-    result = result.sort((a, b) => ((b.lines / (b.goal || 10000)) - (a.lines / (a.goal || 10000))));
+    result = result.sort((a, b) => {
+      let aGoal = a.goal > a.lines ? a.goal : 10000
+      let bGoal = b.goal > b.lines ? b.goal : 10000
+      
+      return ((b.lines / bGoal) - (a.lines / aGoal));
+    });
   }
 
   let run = `
@@ -164,21 +169,27 @@ node ./count.js
   let countInfo =
     "# All count" +
     result.reduce(
-      (x, y) =>
-        x +
+      (x, y) => {
+        let goal = y.goal;
+        if (y.goal > y.lines) {
+          goal = 10000
+        }
+        return  x +
         "\n|" +
         y.lan +
         "|" +
-        (y.goal || 10000) +
+        goal +
         "|" +
         y.lines +
         "|" +
-        Number((y.lines / (y.goal || 10000)) * 100).toFixed(0) +
+        Number((y.lines / goal) * 100).toFixed(0) +
         "|" +
         `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
         "|" +
         `${configLn.find(l => l.ln == y.lan).subjects.join(", ")}` +
-        "|",
+        "|";
+      }
+       ,
       colHeaders
     );
 
