@@ -159,7 +159,7 @@ node ./count.js
 * Scala, Java
 `;
 
-  let colHeaders = "\n|Language" + "|Lines" + "|" + "%|" + "%|" + "%|";
+  let colHeaders = "\n|Language" + "|Goal" + "|Lines" + "|" + "%|" + "%|" + "%|";
   colHeaders += "\n|----------|-------|--------|--------|--------|";
   let countInfo =
     "# All count" +
@@ -168,6 +168,8 @@ node ./count.js
         x +
         "\n|" +
         y.lan +
+        "|" +
+        y.goal || 10000 +
         "|" +
         y.lines +
         "|" +
