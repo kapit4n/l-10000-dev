@@ -1,19 +1,19 @@
 # All count
 |Language|Goal|Lines|%|%|%|
 |----------|-------|-------|--------|--------|--------|
-|js|10000|5610|56|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|
-|go|10000|2803|28|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
-|java|10000|1855|19|![java](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/java.png)|reflexion, strings, generics, documentation|
-|python|10000|1581|16|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |
-|sql|10000|314|3|![sql](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/sql.png)||
-|denti-code|10000|618|6|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|
-|scala|2000|3905|195|![scala](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/scala.png)|play framework, akka, collections|
-|ruby|2000|2168|108|![ruby](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ruby.png)|migrations, ruby on rails, presenters, models|
-|words|10000|68|1|![words](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/words.png)||
-|ts|500|1306|261|![ts](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ts.png)|angular, microORM, typeORM, node js.|
-|html|10000|17|0|![html](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/html.png)||
-|css|10000|12|0|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||
-|dotnet|10000|0|0|![dotnet](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/dotnet.png)||
+|js|6000|5610|94|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|
+|go|3000|2803|93|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
+|java|2000|1855|93|![java](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/java.png)|reflexion, strings, generics, documentation|
+|python|2000|1581|79|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |
+|sql|500|314|63|![sql](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/sql.png)||
+|denti-code|1500|618|41|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|
+|scala|10000|3905|39|![scala](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/scala.png)|play framework, akka, collections|
+|ruby|10000|2168|22|![ruby](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ruby.png)|migrations, ruby on rails, presenters, models|
+|words|500|68|14|![words](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/words.png)||
+|ts|10000|1306|13|![ts](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ts.png)|angular, microORM, typeORM, node js.|
+|html|500|17|3|![html](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/html.png)||
+|css|500|12|2|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||
+|dotnet|500|0|0|![dotnet](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/dotnet.png)||
 |TOTAL|20257|15.582%|
 10/02(0)
 
@@ -40,4 +40,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-04-20T15:56:22.047Z
+, 2021-04-20T16:01:15.512Z

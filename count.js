@@ -127,8 +127,8 @@ setTimeout(function () {
 
   if (displayOrdered) {
     result = result.sort((a, b) => {
-      let aGoal = a.goal > a.lines ? a.goal : 10000
-      let bGoal = b.goal > b.lines ? b.goal : 10000
+      let aGoal = Number(a.goal) > Number(a.lines) ? Number(a.goal) : 10000
+      let bGoal = Number(b.goal) > Number(b.lines) ? Number(b.goal) : 10000
       
       return ((b.lines / bGoal) - (a.lines / aGoal));
     });
@@ -170,8 +170,8 @@ node ./count.js
     "# All count" +
     result.reduce(
       (x, y) => {
-        let goal = y.goal;
-        if (y.goal > y.lines) {
+        let goal = Number(y.goal);
+        if (Number(y.goal) < Number(y.lines)) {
           goal = 10000
         }
         return  x +
