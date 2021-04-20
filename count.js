@@ -11,71 +11,84 @@ const configLn = [
     subjects: [
       "react,", "hooks"
     ],
-    src: ['../../node/denti-code/ui/src', '../../node/denti-code/server']
+    src: ['../../node/denti-code/ui/src', '../../node/denti-code/server'],
+    goal: 1500
   },
-   {
+  {
     ln: 'js',
     title: "JavaScript",
     subjects: [
       "react, ", "angular, sequelize, mongoose, prisma, node js."
-    ]
+    ],
+    goal: 6000
   },
   {
     ln: 'ts',
     title: "TS",
     subjects: [
       "angular, microORM, typeORM, node js."
-    ]
+    ],
+    goal: 500
   },
   {
     ln: 'java',
     title: "java",
-    subjects: ["reflexion", "strings", "generics", "documentation"]
+    subjects: ["reflexion", "strings", "generics", "documentation"],
+    goal: 2000
   },
   {
     ln: 'scala',
     title: "scala",
-    subjects: ["play framework", "akka", "collections"]
+    subjects: ["play framework", "akka", "collections"],
+    goal: 2000
   },
   {
     ln: 'dotnet',
     title: "dotnet",
-    subjects: []
+    subjects: [],
+    goal: 500
   },
   {
     ln: 'words',
     title: "words",
-    subjects: []
+    subjects: [],
+    goal: 500
   },
   {
     ln: 'go',
     title: "go",
-    subjects: ["structs", "loops"]
+    subjects: ["structs", "loops"],
+    goal: 3000
   },
   {
     ln: 'python',
     title: "python",
-    subjects: ["collections", ""]
+    subjects: ["collections", ""],
+    goal: 2000
   },
   {
     ln: 'ruby',
     title: "ruby",
-    subjects: ["migrations", "ruby on rails", "presenters", "models"]
+    subjects: ["migrations", "ruby on rails", "presenters", "models"],
+    goal: 2000
   },
   {
     ln: 'sql',
     title: "sql",
-    subjects: []
+    subjects: [],
+    goal: 500
   },
   {
     ln: 'html',
     title: "html",
-    subjects: []
+    subjects: [],
+    goal: 500
   },
   {
     ln: 'css',
     title: "css",
-    subjects: []
+    subjects: [],
+    goal: 500
   },
 ]
 
@@ -88,7 +101,7 @@ configLn.forEach(ln => {
 configLn.forEach(ln => {
   if (ln.src && ln.src.length > 0) {
     ln.src.forEach(fil => {
-      countFileByLanguage(fil, totals[ln.ln]);  
+      countFileByLanguage(fil, totals[ln.ln]);
     })
   } else {
     countFileByLanguage(srcRoot + "/" + ln.ln, totals[ln.ln]);
@@ -107,12 +120,13 @@ setTimeout(function () {
     appendFile(ln.ln + ".txt", reduced[ln.ln]);
     result.push({
       lan: ln.ln,
-      lines: reduced[ln.ln]
+      lines: reduced[ln.ln],
+      goal: ln.goal
     });
   })
 
   if (displayOrdered) {
-    result = result.sort((a, b) => b.lines - a.lines);
+    result = result.sort((a, b) => ((b.lines / (b.goal || 10000)) - (a.lines / (a.goal || 10000))));
   }
 
   let run = `
@@ -145,8 +159,8 @@ node ./count.js
 * Scala, Java
 `;
 
-  let colHeaders = "\n|Language" + "|Lines" + "|" + "%|" + "%|" + "%|" + "%|";
-  colHeaders += "\n|----------|-------|--------|--------|--------|--------|";
+  let colHeaders = "\n|Language" + "|Lines" + "|" + "%|" + "%|" + "%|";
+  colHeaders += "\n|----------|-------|--------|--------|--------|";
   let countInfo =
     "# All count" +
     result.reduce(
@@ -156,11 +170,8 @@ node ./count.js
         y.lan +
         "|" +
         y.lines +
-        "" +
         "|" +
-        Number((y.lines / 10000) * 100).toFixed(0) +
-        "|" +
-        Number((y.lines / 10000) * 100).toFixed(0) +
+        Number((y.lines / (y.goal || 10000)) * 100).toFixed(0) +
         "|" +
         `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
         "|" +
