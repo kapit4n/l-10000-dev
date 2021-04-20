@@ -160,7 +160,7 @@ node ./count.js
 `;
 
   let colHeaders = "\n|Language" + "|Goal" + "|Lines" + "|" + "%|" + "%|" + "%|";
-  colHeaders += "\n|----------|-------|--------|--------|--------|";
+  colHeaders += "\n|----------|-------|-------|--------|--------|--------|";
   let countInfo =
     "# All count" +
     result.reduce(
@@ -169,7 +169,7 @@ node ./count.js
         "\n|" +
         y.lan +
         "|" +
-        y.goal || 10000 +
+        (y.goal || 10000) +
         "|" +
         y.lines +
         "|" +

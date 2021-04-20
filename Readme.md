@@ -1,19 +1,19 @@
 # All count
 |Language|Goal|Lines|%|%|%|
-|----------|-------|--------|--------|--------|
-|ts|500
-|scala|2000
-|ruby|2000
-|js|6000
-|go|3000
-|java|2000
-|python|2000
-|sql|500
-|denti-code|1500
-|words|500
-|html|500
-|css|500
-|dotnet|500
+|----------|-------|-------|--------|--------|--------|
+|ts|500|1306|261|![ts](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ts.png)|angular, microORM, typeORM, node js.|
+|scala|2000|3905|195|![scala](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/scala.png)|play framework, akka, collections|
+|ruby|2000|2168|108|![ruby](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ruby.png)|migrations, ruby on rails, presenters, models|
+|js|6000|5610|94|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|
+|go|3000|2803|93|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
+|java|2000|1855|93|![java](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/java.png)|reflexion, strings, generics, documentation|
+|python|2000|1581|79|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |
+|sql|500|314|63|![sql](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/sql.png)||
+|denti-code|1500|618|41|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|
+|words|500|68|14|![words](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/words.png)||
+|html|500|17|3|![html](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/html.png)||
+|css|500|12|2|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||
+|dotnet|500|0|0|![dotnet](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/dotnet.png)||
 |TOTAL|20257|15.582%|
 10/02(0)
 
@@ -40,4 +40,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-04-20T15:44:34.448Z
+, 2021-04-20T15:47:24.048Z
