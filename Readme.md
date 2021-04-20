@@ -3,7 +3,7 @@
 |----------|-------|--------|--------|--------|--------|
 |js|5610|56|56|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|
 |scala|3905|39|39|![scala](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/scala.png)|play framework, akka, collections|
-|go|2337|23|23|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
+|go|2766|28|28|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
 |ruby|2168|22|22|![ruby](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ruby.png)|migrations, ruby on rails, presenters, models|
 |java|1855|19|19|![java](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/java.png)|reflexion, strings, generics, documentation|
 |python|1581|16|16|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |
@@ -14,10 +14,10 @@
 |html|17|0|0|![html](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/html.png)||
 |css|12|0|0|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||
 |dotnet|0|0|0|![dotnet](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/dotnet.png)||
-|TOTAL|19791|15.224%|
+|TOTAL|20220|15.554%|
 10/02(0)
 
-10/03(19791)
+10/03(20220)
 
 
 # run it
@@ -40,4 +40,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-04-17T02:35:55.774Z
+, 2021-04-19T15:41:31.091Z
