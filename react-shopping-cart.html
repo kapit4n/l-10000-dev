@@ -1,0 +1,28 @@
+
+      <!DOCTYPE HTML>
+      <html>
+      <head></head>
+      <body>
+        <div style="width: 500px;">
+          <canvas id="react-shopping-cart" width="500" height="300"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+          var ctx = document.getElementById("react-shopping-cart").getContext("2d");
+          const goLabelsDates = ["2021-04-21T16:40:24.915Z","2021-04-21T16:43:40.233Z","2021-04-21T16:43:59.718Z","2021-04-21T16:44:40.303Z","2021-04-21T16:46:13.190Z","2021-04-21T16:48:41.898Z","2021-04-21T16:49:08.753Z","2021-04-21T16:50:32.396Z","2021-04-21T16:51:58.777Z",];
+          var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1)),
+              datasets: [{
+                label: 'react-shopping-cart Progress',
+                backgroundColor: 'rgb(255, 0, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [44452,0,44452,44452,44452,20233,20233,1629,1629,]
+              }]
+            },
+          });
+        </script>
+      </body>
+      </html>  
+      

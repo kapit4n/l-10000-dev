@@ -15,6 +15,15 @@ const configLn = [
     goal: 1500
   },
   {
+    ln: 'react-shopping-cart',
+    title: "React Shopping Cart",
+    subjects: [
+      "react,", "hooks", 'Redux'
+    ],
+    src: [ '../../react/react-shopping-cart'],
+    goal: 1500
+  },
+  {
     ln: 'js',
     title: "JavaScript",
     subjects: [
@@ -264,8 +273,9 @@ function countLinesFiles(srcFile, files, collection) {
     } catch (e) {
       console.log(e);
     }
-
+    
     if (f === 'node_modules') return;
+    if (f === '.git') return;
     if (f === '.gitignore') return;
     if (f === '.editorconfig') return;
     if (f === 'karma.conf.js') return;
@@ -274,6 +284,9 @@ function countLinesFiles(srcFile, files, collection) {
     if (f === 'e2e') return;
     if (f.endsWith('.json')) return;
     if (f.endsWith('.ico')) return;
+    if (f.endsWith('.png')) return;
+    // console.log(f); // display directories used to count
+
     if (isDirectory) {
       console.log("make recursive count");
       countFileByLanguage(srcFile + "/" + f, collection, false);

@@ -9,15 +9,16 @@
 |go|10000|3012|30|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
 |ruby|10000|2168|22|![ruby](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ruby.png)|migrations, ruby on rails, presenters, models|
 |java|10000|2063|21|![java](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/java.png)|reflexion, strings, generics, documentation|
+|react-shopping-cart|10000|1629|16|![react-shopping-cart](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react-shopping-cart.png)|react,, hooks, Redux|
 |words|500|68|14|![words](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/words.png)||
 |ts|10000|1306|13|![ts](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ts.png)|angular, microORM, typeORM, node js.|
 |html|500|17|3|![html](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/html.png)||
 |css|500|12|2|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||
 |dotnet|500|0|0|![dotnet](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/dotnet.png)||
-|TOTAL|21543|16.572%|
+|TOTAL|23172|16.551%|
 10/02(0)
 
-10/03(21543)
+10/03(23172)
 
 
 # run it
@@ -40,4 +41,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-04-21T16:26:32.790Z
+, 2021-04-21T16:51:58.778Z
