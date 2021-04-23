@@ -15,7 +15,7 @@ const configLn = [
     goal: 1500
   },
   {
-    ln: 'react-shopping-cart',
+    ln: 'shopping-cart',
     title: "React Shopping Cart",
     subjects: [
       "react,", "hooks", 'Redux'
@@ -29,7 +29,7 @@ const configLn = [
     subjects: [
       "react, ", "angular, sequelize, mongoose, prisma, node js."
     ],
-    goal: 6000
+    goal: 7000
   },
   {
     ln: 'ts',
