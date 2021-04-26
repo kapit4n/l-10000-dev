@@ -1,6 +1,7 @@
 const fs = require("fs");
 const readline = require('readline')
 const nodeHtmlToImage = require('node-html-to-image')
+const Stream = require('stream');
 
 const srcRoot = './src';
 
@@ -20,7 +21,7 @@ const configLn = [
     subjects: [
       "react,", "hooks", 'Redux'
     ],
-    src: [ '../../react/react-shopping-cart'],
+    src: ['../../react/react-shopping-cart'],
     goal: 1500
   },
   {
@@ -117,20 +118,54 @@ configLn.forEach(ln => {
   }
 })
 
+const getLastLine = (fileName, minLength) => {
+  let inStream = fs.createReadStream(fileName);
+  let outStream = new Stream;
+  return new Promise((resolve, reject) => {
+    let rl = readline.createInterface(inStream, outStream);
 
-setTimeout(function () {
+    let lastLine = '';
+    rl.on('line', function (line) {
+      if (line.length >= minLength) {
+        lastLine = line;
+      }
+    });
+
+    rl.on('error', reject)
+
+    rl.on('close', () => {
+      resolve(lastLine)
+    });
+  })
+}
+
+setTimeout(async () => {
   var result = [];
   let displayOrdered = true;
 
   reduced = {}
 
-  configLn.forEach(ln => {
+  await configLn.forEach(async ln => {
     reduced[ln.ln] = totals[ln.ln].reduce(sumFunc, 0)
+
+    console.log('###################')
+    console.log(`${ln.ln}: ${reduced[ln.ln]}`)
+    console.log("Reading data")
+
+    /* let lastLine = await getLastLine(ln.ln + ".txt", 1)
+      .then((ll) => {
+        return ll.split(",")[0];
+      })
+      .catch((err) => {
+        console.error(err)
+      }) */
+    let lastLine = 0;
     appendFile(ln.ln + ".txt", reduced[ln.ln]);
     result.push({
       lan: ln.ln,
       lines: reduced[ln.ln],
-      goal: ln.goal
+      goal: ln.goal,
+      diff: Number(reduced[ln.ln]) - Number(lastLine)
     });
   })
 
@@ -138,7 +173,7 @@ setTimeout(function () {
     result = result.sort((a, b) => {
       let aGoal = Number(a.goal) > Number(a.lines) ? Number(a.goal) : 10000
       let bGoal = Number(b.goal) > Number(b.lines) ? Number(b.goal) : 10000
-      
+
       return ((b.lines / bGoal) - (a.lines / aGoal));
     });
   }
@@ -173,7 +208,7 @@ node ./count.js
 * Scala, Java
 `;
 
-  let colHeaders = "\n|Language" + "|Goal" + "|Lines" + "|" + "%|" + "%|" + "%|";
+  let colHeaders = "\n|Language" + "|Goal" + "|Lines"  + "%|" + "%|" + "%|";
   colHeaders += "\n|----------|-------|-------|--------|--------|--------|";
   let countInfo =
     "# All count" +
@@ -183,22 +218,22 @@ node ./count.js
         if (Number(y.goal) < Number(y.lines)) {
           goal = 10000
         }
-        return  x +
-        "\n|" +
-        y.lan +
-        "|" +
-        goal +
-        "|" +
-        y.lines +
-        "|" +
-        Number((y.lines / goal) * 100).toFixed(0) +
-        "|" +
-        `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
-        "|" +
-        `${configLn.find(l => l.ln == y.lan).subjects.join(", ")}` +
-        "|";
+        return x +
+          "\n|" +
+          y.lan +
+          "|" +
+          goal +
+          "|" +
+          y.lines +
+          "|" +
+          Number((y.lines / goal) * 100).toFixed(0) +
+          "|" +
+          `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
+          "|" +
+          `${configLn.find(l => l.ln == y.lan).subjects.join(", ")}` +
+          "|";
       }
-       ,
+      ,
       colHeaders
     );
 
@@ -212,7 +247,7 @@ node ./count.js
   let goalPercent = Number((total / countGoal) * 100).toFixed(3);
 
   countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
-  console.log(countInfo);
+  // console.log(countInfo);
 
   writeCountAll('total.txt', total)
 
@@ -273,7 +308,7 @@ function countLinesFiles(srcFile, files, collection) {
     } catch (e) {
       console.log(e);
     }
-    
+
     if (f === 'node_modules') return;
     if (f === '.git') return;
     if (f === '.gitignore') return;
@@ -288,7 +323,7 @@ function countLinesFiles(srcFile, files, collection) {
     // console.log(f); // display directories used to count
 
     if (isDirectory) {
-      console.log("make recursive count");
+      // console.log("make recursive count");
       countFileByLanguage(srcFile + "/" + f, collection, false);
     } else {
       countLines(srcFile + "/" + f, function (err, data) {
@@ -305,7 +340,7 @@ function countFileByLanguage(srcFile, collection, displayFiles) {
       return;
     }
 
-    console.log(files);
+    // console.log(files);
 
     if (displayFiles) console.log("Files: " + files.join(", "));
 
