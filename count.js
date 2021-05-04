@@ -13,7 +13,7 @@ const configLn = [
       "react,", "hooks"
     ],
     src: ['../../node/denti-code/ui/src', '../../node/denti-code/server'],
-    goal: 1500
+    goal: 2000
   },
   {
     ln: 'shopping-cart',
@@ -22,7 +22,7 @@ const configLn = [
       "react,", "hooks", 'Redux'
     ],
     src: ['../../react/react-shopping-cart'],
-    goal: 1500
+    goal: 2000
   },
   {
     ln: 'js',
