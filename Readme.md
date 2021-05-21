@@ -1,8 +1,8 @@
 # All count
 |Language|Goal|Lines%|%|%|
 |----------|-------|-------|--------|--------|--------|
-|shopping-cart|2000|1618|81|![shopping-cart](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/shopping-cart.png)|react,, hooks, Redux|
-|denti-code|2000|1542|77|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|
+|denti-code|2000|1638|82|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|
+|shopping-cart|2000|1623|81|![shopping-cart](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/shopping-cart.png)|react,, hooks, Redux|
 |js|10000|7183|72|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|
 |sql|500|314|63|![sql](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/sql.png)||
 |scala|10000|3905|39|![scala](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/scala.png)|play framework, akka, collections|
@@ -15,10 +15,10 @@
 |html|500|17|3|![html](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/html.png)||
 |css|500|12|2|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||
 |dotnet|500|0|0|![dotnet](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/dotnet.png)||
-|TOTAL|25233|18.024%|
+|TOTAL|25334|18.096%|
 10/02(0)
 
-10/03(25233)
+10/03(25334)
 
 
 # run it
@@ -41,4 +41,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-05-04T01:51:49.907Z
+, 2021-05-21T00:30:21.777Z
