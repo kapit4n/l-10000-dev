@@ -1,6 +1,6 @@
 # All count
 |Language|Goal|Lines%|%|%|
-|----------|-------|-------|--------|--------|--------|
+|----------|-------|-------|--------|--------|
 |denti-code|2000|1731|87|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|
 |scala|6000|3918|65|![scala](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/scala.png)|play framework, akka, collections|
 |react|1000|26|3|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds|
