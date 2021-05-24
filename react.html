@@ -4,12 +4,12 @@
       <head></head>
       <body>
         <div style="width: 500px;">
-          <canvas id="react" width="500" height="300"></canvas>
+          <canvas id="react" width="300" height="150"></canvas>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
           var ctx = document.getElementById("react").getContext("2d");
-          const goLabelsDates = ["2021-05-24T15:22:20.900Z","2021-05-24T15:33:34.624Z","2021-05-24T15:46:16.099Z","2021-05-24T15:48:12.170Z",];
+          const goLabelsDates = ["2021-05-24T15:22:20.900Z","2021-05-24T15:33:34.624Z","2021-05-24T15:46:16.099Z","2021-05-24T15:48:12.170Z","2021-05-24T15:53:54.498Z",];
           var chart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -18,7 +18,7 @@
                 label: 'react Progress',
                 backgroundColor: 'rgb(255, 0, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [26,26,26,26,]
+                data: [26,26,26,26,26,]
               }]
             },
           });

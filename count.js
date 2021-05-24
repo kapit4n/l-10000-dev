@@ -15,7 +15,7 @@ const configLn = [
     src: ['../../node/denti-code/src', '../../node/denti-code-server'],
     goal: 2000
   },
-  {
+  /* {
     ln: 'shopping-cart',
     title: "React Shopping Cart",
     subjects: [
@@ -23,7 +23,7 @@ const configLn = [
     ],
     src: ['../../react/react-shopping-cart'],
     goal: 2000
-  },
+  }, */
 /*   {
     ln: 'js',
     title: "JavaScript",
@@ -48,12 +48,12 @@ const configLn = [
     ],
     goal: 500
   }, */
-  {
+/*   {
     ln: 'java',
     title: "java",
     subjects: ["reflexion", "strings", "generics", "documentation"],
     goal: 2000
-  },
+  }, */
   {
     ln: 'scala',
     title: "scala",
@@ -84,12 +84,12 @@ const configLn = [
     subjects: ["collections", ""],
     goal: 2000
   }, */
-  {
+ /*  {
     ln: 'ruby',
     title: "ruby",
     subjects: ["migrations", "ruby on rails", "presenters", "models"],
     goal: 2000
-  },
+  }, */
   /* {
     ln: 'sql',
     title: "sql",
@@ -389,7 +389,7 @@ function buildCharts(title, file) {
       <head></head>
       <body>
         <div style="width: 500px;">
-          <canvas id="${title}" width="500" height="300"></canvas>
+          <canvas id="${title}" width="300" height="150"></canvas>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
