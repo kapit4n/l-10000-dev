@@ -33,6 +33,14 @@ const configLn = [
     goal: 7000
   },
   {
+    ln: 'react',
+    title: "React",
+    subjects: [
+      "Testing, builds"
+    ],
+    goal: 1000
+  },
+  {
     ln: 'ts',
     title: "TS",
     subjects: [
@@ -50,7 +58,7 @@ const configLn = [
     ln: 'scala',
     title: "scala",
     subjects: ["play framework", "akka", "collections"],
-    goal: 2000
+    goal: 6000
   },
   {
     ln: 'dotnet',
