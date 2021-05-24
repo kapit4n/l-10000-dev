@@ -24,14 +24,14 @@ const configLn = [
     src: ['../../react/react-shopping-cart'],
     goal: 2000
   },
-  {
+/*   {
     ln: 'js',
     title: "JavaScript",
     subjects: [
       "react, ", "angular, sequelize, mongoose, prisma, node js."
     ],
     goal: 7000
-  },
+  }, */
   {
     ln: 'react',
     title: "React",
@@ -40,14 +40,14 @@ const configLn = [
     ],
     goal: 1000
   },
-  {
+ /*  {
     ln: 'ts',
     title: "TS",
     subjects: [
       "angular, microORM, typeORM, node js."
     ],
     goal: 500
-  },
+  }, */
   {
     ln: 'java',
     title: "java",
@@ -60,19 +60,19 @@ const configLn = [
     subjects: ["play framework", "akka", "collections"],
     goal: 6000
   },
-  {
+  /* {
     ln: 'dotnet',
     title: "dotnet",
     subjects: [],
     goal: 500
-  },
-  {
+  }, */
+  /* {
     ln: 'words',
     title: "words",
     subjects: [],
     goal: 500
-  },
-  {
+  }, */
+ /*  {
     ln: 'go',
     title: "go",
     subjects: ["structs", "loops"],
@@ -83,30 +83,36 @@ const configLn = [
     title: "python",
     subjects: ["collections", ""],
     goal: 2000
-  },
+  }, */
   {
     ln: 'ruby',
     title: "ruby",
     subjects: ["migrations", "ruby on rails", "presenters", "models"],
     goal: 2000
   },
-  {
+  /* {
     ln: 'sql',
     title: "sql",
     subjects: [],
     goal: 500
-  },
-  {
+  }, */
+ /*  {
     ln: 'html',
     title: "html",
     subjects: [],
     goal: 500
-  },
+  }, */
   {
     ln: 'css',
     title: "css",
     subjects: [],
     goal: 500
+  },
+  {
+    ln: 'flutter',
+    title: "flutter",
+    subjects: [],
+    goal: 1000
   },
 ]
 
