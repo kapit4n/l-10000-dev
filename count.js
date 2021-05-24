@@ -12,7 +12,7 @@ const configLn = [
     subjects: [
       "react,", "hooks"
     ],
-    src: ['../../node/denti-code/ui/src', '../../node/denti-code/server'],
+    src: ['../../node/denti-code/src', '../../node/denti-code-server'],
     goal: 2000
   },
   {
