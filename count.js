@@ -223,7 +223,7 @@ node ./count.js
 `;
 
   let colHeaders = "\n|Language" + "|Goal" + "|Lines"  + "%|" + "%|" + "%|";
-  colHeaders += "\n|----------|-------|-------|--------|--------|--------|";
+  colHeaders += "\n|----------|-------|-------|--------|--------|";
   let countInfo =
     "# All count" +
     result.reduce(
