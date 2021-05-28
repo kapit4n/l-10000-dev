@@ -4,21 +4,21 @@
       <head></head>
       <body>
         <div style="width: 500px;">
-          <canvas id="flutter" width="300" height="150"></canvas>
+          <canvas id="reactn-doctor" width="300" height="150"></canvas>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
-          var ctx = document.getElementById("flutter").getContext("2d");
-          const goLabelsDates = ["2021-05-24T15:46:16.101Z","2021-05-24T15:48:12.170Z","2021-05-24T15:53:54.498Z","2021-05-24T15:56:18.486Z","2021-05-28T22:50:32.913Z",];
+          var ctx = document.getElementById("reactn-doctor").getContext("2d");
+          const goLabelsDates = ["2021-05-28T22:50:32.912Z",];
           var chart = new Chart(ctx, {
             type: 'line',
             data: {
               labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1)),
               datasets: [{
-                label: 'flutter Progress',
+                label: 'reactn-doctor Progress',
                 backgroundColor: 'rgb(255, 0, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [20,20,20,20,20,]
+                data: [445,]
               }]
             },
           });

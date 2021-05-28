@@ -7,6 +7,15 @@ const srcRoot = './src';
 
 const configLn = [
   {
+    ln: 'reactn-doctor',
+    title: "Typescript Denti",
+    subjects: [
+      "react-native,", "hooks"
+    ],
+    src: ['../../react-native/reactnDoctor1/components', '../../react-native/reactnDoctor1/screens', '../../react-native/reactnDoctor1/navigation', '../../react-native/reactnDoctor1/hooks'],
+    goal: 2000
+  },
+/*   {
     ln: 'denti-code',
     title: "JavaScript Denti",
     subjects: [
@@ -14,7 +23,7 @@ const configLn = [
     ],
     src: ['../../node/denti-code/src', '../../node/denti-code-server'],
     goal: 2000
-  },
+  }, */
   /* {
     ln: 'shopping-cart',
     title: "React Shopping Cart",
