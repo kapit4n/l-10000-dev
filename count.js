@@ -63,12 +63,12 @@ const configLn = [
     subjects: ["reflexion", "strings", "generics", "documentation"],
     goal: 2000
   }, */
-  {
+  /* {
     ln: 'scala',
     title: "scala",
     subjects: ["play framework", "akka", "collections"],
     goal: 6000
-  },
+  }, */
   /* {
     ln: 'dotnet',
     title: "dotnet",
@@ -81,12 +81,13 @@ const configLn = [
     subjects: [],
     goal: 500
   }, */
- /*  {
+   {
     ln: 'go',
     title: "go",
     subjects: ["structs", "loops"],
     goal: 3000
   },
+/*
   {
     ln: 'python',
     title: "python",
