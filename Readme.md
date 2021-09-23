@@ -3,13 +3,14 @@
 |----------|-------|-------|--------|--------|
 |go|10000|3061|31|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|
 |reactn-doctor|2000|559|28|![reactn-doctor](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/reactn-doctor.png)|react-native,, hooks|
+|python|10000|2183|22|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |
 |react|1000|26|3|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds|
 |css|500|12|2|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||
 |flutter|1000|20|2|![flutter](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/flutter.png)||
-|TOTAL|3678|7.356%|
+|TOTAL|5861|9.768%|
 10/02(0)
 
-10/03(3678)
+10/03(5861)
 
 
 # run it
@@ -32,4 +33,4 @@ node ./count.js
 * Angular, React, Vue
 * Spring, Play
 * Scala, Java
-, 2021-09-23T00:10:19.737Z
+, 2021-09-23T00:54:30.987Z
