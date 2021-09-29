@@ -2,16 +2,16 @@
 |Language|Goal|Lines%|%|%|%|Subjects|
 |----------|-------|-------|--------|--------|--------|--------|
 |js|10000|7194|72|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|enzyme|
-|go|10000|3131|31|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|consumingRESTfulAPI, data structures, queue, mux|
+|go|10000|3174|32|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|consumingRESTfulAPI, data structures, go slices, queue, mux|
 |python|10000|2353|24|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |algorithms, django pdf, django tips, yield|
 |react|1000|26|3|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds||
 |css|500|12|2|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||basic001, box model|
 |flutter|1000|20|2|![flutter](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/flutter.png)||stale less widget|
 |reactn-doctor|2000|0|0|![reactn-doctor](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/reactn-doctor.png)|react-native,, hooks||
-|TOTAL|12736|18.194%|
+|TOTAL|12779|18.256%|
 10/02(0)
 
-10/03(12736)
+10/03(12779)
 
 
   # run it
@@ -34,4 +34,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-09-29T22:39:38.616Z
+  , 2021-09-29T23:07:40.179Z
