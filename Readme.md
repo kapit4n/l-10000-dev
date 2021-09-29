@@ -6,7 +6,7 @@
 |python|10000|2353|24|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |algorithms, django pdf, django tips, yield|
 |react|1000|26|3|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds||
 |css|500|12|2|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||basic001, box model|
-|flutter|1000|20|2|![flutter](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/flutter.png)||stale less_widget|
+|flutter|1000|20|2|![flutter](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/flutter.png)||stale less widget|
 |reactn-doctor|2000|0|0|![reactn-doctor](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/reactn-doctor.png)|react-native,, hooks||
 |TOTAL|12657|18.081%|
 10/02(0)
@@ -34,4 +34,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-09-29T21:59:06.075Z
+  , 2021-09-29T22:09:34.545Z

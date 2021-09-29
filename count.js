@@ -220,7 +220,7 @@ function countLinesFiles(srcFile, files, collection, ln) {
     if (!filePath.includes('/old') && !fileName.startsWith('index.')) {
       console.log(srcFile + "/" + fileName); // display directories used to count
       if (!isDirectory && fileName.split('.')[0]) {
-        const subjectName = fileName.split('.')[0].replace('_', " ").replace('-', " ")
+        const subjectName = fileName.split('.')[0].replace(/_/g, " ").replace(/-/g, " ")
         lnSubjects[ln].push(subjectName)
       }
     }
