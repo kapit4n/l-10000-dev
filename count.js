@@ -104,6 +104,10 @@ function buildTotalCounts() {
           if (Number(y.goal) < Number(y.lines)) {
             goal = 10000
           }
+          
+          console.log(y)
+          console.log(lnSubjects)
+
           return x +
             "\n|" +
             y.lan +
@@ -215,6 +219,10 @@ function countLinesFiles(srcFile, files, collection, ln) {
       console.log(srcFile + "/" + fileName); // display directories used to count
       const subjectName = fileName.split('.')[0]
       console.log(subjectName)
+      console.log(ln)
+      console.log(ln)
+      console.log(ln)
+      console.log(ln)
       lnSubjects[ln].push(subjectName)
     }
 
