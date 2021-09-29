@@ -1,17 +1,17 @@
 # All count
 |Language|Goal|Lines%|%|%|%|Subjects|
 |----------|-------|-------|--------|--------|--------|--------|
-|js|10000|7194|72|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|enzyme, node-rest, sqq-example, index, index|
-|go|10000|3061|31|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|consumingRESTfulAPI, http-example, go, go, main|
-|python|10000|2354|24|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |algorithms, django-pdf, django-tips, index, yield_001|
-|react|1000|26|3|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds|src, index|
-|css|500|12|2|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||basic001, box-model|
-|flutter|1000|20|2|![flutter](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/flutter.png)||index|
+|js|10000|7194|72|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|enzyme|
+|go|10000|3052|31|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|consumingRESTfulAPI, mux|
+|python|10000|2353|24|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |algorithms, django pdf, django tips, yield|
+|react|1000|26|3|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds||
+|css|500|12|2|![css](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/css.png)||basic001, box model|
+|flutter|1000|20|2|![flutter](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/flutter.png)||stale less_widget|
 |reactn-doctor|2000|0|0|![reactn-doctor](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/reactn-doctor.png)|react-native,, hooks||
-|TOTAL|12667|18.096%|
+|TOTAL|12657|18.081%|
 10/02(0)
 
-10/03(12667)
+10/03(12657)
 
 
   # run it
@@ -34,4 +34,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-09-29T21:45:36.053Z
+  , 2021-09-29T21:59:06.075Z

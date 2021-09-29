@@ -204,6 +204,8 @@ function countLinesFiles(srcFile, files, collection, ln) {
 
     if (fileName === 'node_modules') return;
     if (fileName === '.git') return;
+    if (fileName === 'go.mod') return;
+    if (fileName === 'go.sum') return;
     if (fileName === '.gitignore') return;
     if (fileName === '.editorconfig') return;
     if (fileName === 'karma.conf.js') return;
@@ -215,15 +217,12 @@ function countLinesFiles(srcFile, files, collection, ln) {
     if (fileName.endsWith('.png')) return;
 
     const filePath = srcFile + "/" + fileName
-    if (!filePath.includes('/old')) {
+    if (!filePath.includes('/old') && !fileName.startsWith('index.')) {
       console.log(srcFile + "/" + fileName); // display directories used to count
-      const subjectName = fileName.split('.')[0]
-      console.log(subjectName)
-      console.log(ln)
-      console.log(ln)
-      console.log(ln)
-      console.log(ln)
-      lnSubjects[ln].push(subjectName)
+      if (!isDirectory && fileName.split('.')[0]) {
+        const subjectName = fileName.split('.')[0].replace('_', " ").replace('-', " ")
+        lnSubjects[ln].push(subjectName)
+      }
     }
 
     if (isDirectory) {
