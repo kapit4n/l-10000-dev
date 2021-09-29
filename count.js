@@ -1,294 +1,148 @@
 const fs = require("fs");
 const readline = require('readline')
 const nodeHtmlToImage = require('node-html-to-image')
-const Stream = require('stream');
+
+const configLn = require('./config').configLn
 
 const srcRoot = './src';
 
-const configLn = [
-  {
-    ln: 'reactn-doctor',
-    title: "Typescript Denti",
-    subjects: [
-      "react-native,", "hooks"
-    ],
-    src: ['../../react-native/reactnDoctor1/components', '../../react-native/reactnDoctor1/screens', '../../react-native/reactnDoctor1/navigation', '../../react-native/reactnDoctor1/hooks'],
-    goal: 2000
-  },
-/*   {
-    ln: 'denti-code',
-    title: "JavaScript Denti",
-    subjects: [
-      "react,", "hooks"
-    ],
-    src: ['../../node/denti-code/src', '../../node/denti-code-server'],
-    goal: 2000
-  }, */
-  /* {
-    ln: 'shopping-cart',
-    title: "React Shopping Cart",
-    subjects: [
-      "react,", "hooks", 'Redux'
-    ],
-    src: ['../../react/react-shopping-cart'],
-    goal: 2000
-  }, */
-/*   {
-    ln: 'js',
-    title: "JavaScript",
-    subjects: [
-      "react, ", "angular, sequelize, mongoose, prisma, node js."
-    ],
-    goal: 7000
-  }, */
-  {
-    ln: 'react',
-    title: "React",
-    subjects: [
-      "Testing, builds"
-    ],
-    goal: 1000
-  },
- /*  {
-    ln: 'ts',
-    title: "TS",
-    subjects: [
-      "angular, microORM, typeORM, node js."
-    ],
-    goal: 500
-  }, */
-/*   {
-    ln: 'java',
-    title: "java",
-    subjects: ["reflexion", "strings", "generics", "documentation"],
-    goal: 2000
-  }, */
-  /* {
-    ln: 'scala',
-    title: "scala",
-    subjects: ["play framework", "akka", "collections"],
-    goal: 6000
-  }, */
-  /* {
-    ln: 'dotnet',
-    title: "dotnet",
-    subjects: [],
-    goal: 500
-  }, */
-  /* {
-    ln: 'words',
-    title: "words",
-    subjects: [],
-    goal: 500
-  }, */
-   {
-    ln: 'go',
-    title: "go",
-    subjects: ["structs", "loops"],
-    goal: 3000
-  },
-  {
-    ln: 'python',
-    title: "python",
-    subjects: ["collections", ""],
-    goal: 2000
-  },
- /*  {
-    ln: 'ruby',
-    title: "ruby",
-    subjects: ["migrations", "ruby on rails", "presenters", "models"],
-    goal: 2000
-  }, */
-  /* {
-    ln: 'sql',
-    title: "sql",
-    subjects: [],
-    goal: 500
-  }, */
- /*  {
-    ln: 'html',
-    title: "html",
-    subjects: [],
-    goal: 500
-  }, */
-  {
-    ln: 'css',
-    title: "css",
-    subjects: [],
-    goal: 500
-  },
-  {
-    ln: 'flutter',
-    title: "flutter",
-    subjects: [],
-    goal: 1000
-  },
-]
-
 let totals = {};
 
-configLn.forEach(ln => {
-  totals[ln.ln] = [];
-})
+function countAllLns() {
+  configLn.forEach(ln => {
+    totals[ln.ln] = [];
+  })
 
-configLn.forEach(ln => {
-  if (ln.src && ln.src.length > 0) {
-    ln.src.forEach(fil => {
-      countFileByLanguage(fil, totals[ln.ln]);
-    })
-  } else {
-    countFileByLanguage(srcRoot + "/" + ln.ln, totals[ln.ln]);
-  }
-})
-
-const getLastLine = (fileName, minLength) => {
-  let inStream = fs.createReadStream(fileName);
-  let outStream = new Stream;
-  return new Promise((resolve, reject) => {
-    let rl = readline.createInterface(inStream, outStream);
-
-    let lastLine = '';
-    rl.on('line', function (line) {
-      if (line.length >= minLength) {
-        lastLine = line;
-      }
-    });
-
-    rl.on('error', reject)
-
-    rl.on('close', () => {
-      resolve(lastLine)
-    });
+  configLn.forEach(ln => {
+    if (ln.src && ln.src.length > 0) {
+      ln.src.forEach(fil => {
+        countFileByLanguage(fil, totals[ln.ln]);
+      })
+    } else {
+      countFileByLanguage(srcRoot + "/" + ln.ln, totals[ln.ln]);
+    }
   })
 }
 
-setTimeout(async () => {
-  var result = [];
-  let displayOrdered = true;
+function buildTotalCounts() {
+  setTimeout(async () => {
+    var result = [];
+    let displayOrdered = true;
 
-  reduced = {}
+    reduced = {}
 
-  await configLn.forEach(async ln => {
-    reduced[ln.ln] = totals[ln.ln].reduce(sumFunc, 0)
+    await configLn.forEach(async ln => {
+      reduced[ln.ln] = totals[ln.ln].reduce(sumFunc, 0)
 
-    console.log('###################')
-    console.log(`${ln.ln}: ${reduced[ln.ln]}`)
-    console.log("Reading data")
+      console.log('###################')
+      console.log(`${ln.ln}: ${reduced[ln.ln]}`)
+      console.log("Reading data")
 
-    /* let lastLine = await getLastLine(ln.ln + ".txt", 1)
-      .then((ll) => {
-        return ll.split(",")[0];
-      })
-      .catch((err) => {
-        console.error(err)
-      }) */
-    let lastLine = 0;
-    appendFile(ln.ln + ".txt", reduced[ln.ln]);
-    result.push({
-      lan: ln.ln,
-      lines: reduced[ln.ln],
-      goal: ln.goal,
-      diff: Number(reduced[ln.ln]) - Number(lastLine)
-    });
-  })
+      let lastLine = 0;
+      appendFile(ln.ln + ".txt", reduced[ln.ln]);
+      result.push({
+        lan: ln.ln,
+        lines: reduced[ln.ln],
+        goal: ln.goal,
+        diff: Number(reduced[ln.ln]) - Number(lastLine)
+      });
+    })
 
-  if (displayOrdered) {
-    result = result.sort((a, b) => {
-      let aGoal = Number(a.goal) > Number(a.lines) ? Number(a.goal) : 10000
-      let bGoal = Number(b.goal) > Number(b.lines) ? Number(b.goal) : 10000
+    if (displayOrdered) {
+      result = result.sort((a, b) => {
+        let aGoal = Number(a.goal) > Number(a.lines) ? Number(a.goal) : 10000
+        let bGoal = Number(b.goal) > Number(b.lines) ? Number(b.goal) : 10000
 
-      return ((b.lines / bGoal) - (a.lines / aGoal));
-    });
-  }
+        return ((b.lines / bGoal) - (a.lines / aGoal));
+      });
+    }
 
-  let run = `
-# run it
-node ./count.js
-    `;
+    let run = `
+  # run it
+  node ./count.js
+      `;
 
-  let activity = `
-# Activities
-* Write source code related to any topic
-* Comment the understanding part of it
-    `;
+    let activity = `
+  # Activities
+  * Write source code related to any topic
+  * Comment the understanding part of it
+      `;
 
-  let purposes = `
-# Purposes
-* Reach to 100 lines daily
-* 2000 lines of source code monthly
-* 20 commits more
-`;
+    let purposes = `
+  # Purposes
+  * Reach to 100 lines daily
+  * 2000 lines of source code monthly
+  * 20 commits more
+  `;
 
-  let enfore = `# Enforce
-* Algorithms
-* Code writing velocity
-`;
+    let enfore = `# Enforce
+  * Algorithms
+  * Code writing velocity
+  `;
 
-  let technologies = `
-# Technologies
-* Angular, React, Vue
-* Spring, Play
-* Scala, Java
-`;
+    let technologies = `
+  # Technologies
+  * Angular, React, Vue
+  * Spring, Play
+  * Scala, Java
+  `;
 
-  let colHeaders = "\n|Language" + "|Goal" + "|Lines"  + "%|" + "%|" + "%|";
-  colHeaders += "\n|----------|-------|-------|--------|--------|";
-  let countInfo =
-    "# All count" +
-    result.reduce(
-      (x, y) => {
-        let goal = Number(y.goal);
-        if (Number(y.goal) < Number(y.lines)) {
-          goal = 10000
+    let colHeaders = "\n|Language" + "|Goal" + "|Lines" + "%|" + "%|" + "%|";
+    colHeaders += "\n|----------|-------|-------|--------|--------|";
+    let countInfo =
+      "# All count" +
+      result.reduce(
+        (x, y) => {
+          let goal = Number(y.goal);
+          if (Number(y.goal) < Number(y.lines)) {
+            goal = 10000
+          }
+          return x +
+            "\n|" +
+            y.lan +
+            "|" +
+            goal +
+            "|" +
+            y.lines +
+            "|" +
+            Number((y.lines / goal) * 100).toFixed(0) +
+            "|" +
+            `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
+            "|" +
+            `${configLn.find(l => l.ln == y.lan).subjects.join(", ")}` +
+            "|";
         }
-        return x +
-          "\n|" +
-          y.lan +
-          "|" +
-          goal +
-          "|" +
-          y.lines +
-          "|" +
-          Number((y.lines / goal) * 100).toFixed(0) +
-          "|" +
-          `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
-          "|" +
-          `${configLn.find(l => l.ln == y.lan).subjects.join(", ")}` +
-          "|";
-      }
-      ,
-      colHeaders
-    );
+        ,
+        colHeaders
+      );
 
-  let total = 0;
+    let total = 0;
 
-  configLn.forEach(ln => {
-    total += reduced[ln.ln]
-  })
+    configLn.forEach(ln => {
+      total += reduced[ln.ln]
+    })
 
-  let countGoal = 10000 * configLn.length;
-  let goalPercent = Number((total / countGoal) * 100).toFixed(3);
+    let countGoal = 10000 * configLn.length;
+    let goalPercent = Number((total / countGoal) * 100).toFixed(3);
 
-  countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
-  // console.log(countInfo);
+    countInfo += "\n|TOTAL|" + total + "|" + goalPercent + "%|";
 
-  writeCountAll('total.txt', total)
+    writeCountAll('total.txt', total)
 
-  // param to save previous
-  // read previous after it
-  let previous = 0;
-  countInfo += "\n" + "10/02(" + (previous) + ")\n";
-  countInfo += "\n" + "10/03(" + (total - previous) + ")\n";
-  countInfo += "\n" + run + "\n" + enfore + activity + purposes + technologies;
+    let previous = 0;
+    countInfo += "\n" + "10/02(" + (previous) + ")\n";
+    countInfo += "\n" + "10/03(" + (total - previous) + ")\n";
+    countInfo += "\n" + run + "\n" + enfore + activity + purposes + technologies;
 
-  writeFile("Readme.md", countInfo);
+    writeFile("Readme.md", countInfo);
 
-  configLn.forEach(ln => {
-    buildCharts(ln.ln, ln.ln + ".txt")
-  })
-  buildCharts("total", "./total.txt");
-}, 5000);
+    configLn.forEach(ln => {
+      buildCharts(ln.ln, ln.ln + ".txt")
+    })
+    buildCharts("total", "./total.txt");
+  }, 5000);
 
+}
 
 function appendFile(fileName, content) {
   fs.appendFile(fileName, content + ", " + new Date().toISOString() + "\n", function (err) {
@@ -432,3 +286,7 @@ function buildCharts(title, file) {
     fs.writeFileSync(title + ".html", fileText)
   })
 }
+
+countAllLns();
+
+buildTotalCounts()
