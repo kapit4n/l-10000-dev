@@ -1,6 +1,6 @@
 # All count
-|Language|Goal|Lines%|%|%|Subjects|
-|----------|-------|-------|--------|--------|--------|
+|Language|Goal|Lines%|%|%|%|Subjects|
+|----------|-------|-------|--------|--------|--------|--------|
 |js|10000|7194|72|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , angular, sequelize, mongoose, prisma, node js.|enzyme, node-rest, sqq-example, index, index|
 |go|10000|3061|31|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|consumingRESTfulAPI, http-example, go, go, main|
 |python|10000|2354|24|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |algorithms, django-pdf, django-tips, index, yield_001|
@@ -34,4 +34,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-09-29T21:41:38.242Z
+  , 2021-09-29T21:45:36.053Z

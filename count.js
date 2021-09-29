@@ -92,9 +92,9 @@ function buildTotalCounts() {
   * Scala, Java
   `;
 
-    let colHeaders = "\n|Language" + "|Goal" + "|Lines" + "%|" + "%|" + "%|" + "Subjects|";
+    let colHeaders = "\n|Language" + "|Goal" + "|Lines" + "%|" + "%|" + "%|"+ "%|" + "Subjects|";
     
-    colHeaders += "\n|----------|-------|-------|--------|--------|--------|";
+    colHeaders += "\n|----------|-------|-------|--------|--------|--------|--------|";
 
     let countInfo =
       "# All count" +
