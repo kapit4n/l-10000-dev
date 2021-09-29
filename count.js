@@ -7,6 +7,7 @@ const configLn = require('./config').configLn
 const srcRoot = './src';
 
 let totals = {};
+let lnSubjects = {};
 
 function countAllLns() {
   configLn.forEach(ln => {
@@ -14,12 +15,16 @@ function countAllLns() {
   })
 
   configLn.forEach(ln => {
+    lnSubjects[ln.ln] = [];
+  })
+
+  configLn.forEach(ln => {
     if (ln.src && ln.src.length > 0) {
       ln.src.forEach(fil => {
-        countFileByLanguage(fil, totals[ln.ln]);
+        countFileByLanguage(fil, totals[ln.ln], ln.ln);
       })
     } else {
-      countFileByLanguage(srcRoot + "/" + ln.ln, totals[ln.ln]);
+      countFileByLanguage(srcRoot + "/" + ln.ln, totals[ln.ln], ln.ln);
     }
   })
 }
@@ -87,8 +92,10 @@ function buildTotalCounts() {
   * Scala, Java
   `;
 
-    let colHeaders = "\n|Language" + "|Goal" + "|Lines" + "%|" + "%|" + "%|";
-    colHeaders += "\n|----------|-------|-------|--------|--------|";
+    let colHeaders = "\n|Language" + "|Goal" + "|Lines" + "%|" + "%|" + "%|" + "Subjects|";
+    
+    colHeaders += "\n|----------|-------|-------|--------|--------|--------|";
+
     let countInfo =
       "# All count" +
       result.reduce(
@@ -110,7 +117,11 @@ function buildTotalCounts() {
             `![${y.lan}](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/${y.lan}.png)` +
             "|" +
             `${configLn.find(l => l.ln == y.lan).subjects.join(", ")}` +
-            "|";
+            "|"
+            +
+            `${lnSubjects[y.lan].join(", ")}` +
+            "|"
+            ;
         }
         ,
         colHeaders
@@ -177,40 +188,48 @@ const countLines = function (filePath, callback) {
     .on("end", () => callback(null, count));
 };
 
-function countLinesFiles(srcFile, files, collection) {
-  files.forEach(f => {
+function countLinesFiles(srcFile, files, collection, ln) {
+  files.forEach(fileName => {
     let isDirectory = false;
+    
     try {
-      isDirectory = fs.lstatSync(srcFile + "/" + f).isDirectory()
+      isDirectory = fs.lstatSync(srcFile + "/" + fileName).isDirectory()
     } catch (e) {
       console.log(e);
     }
 
-    if (f === 'node_modules') return;
-    if (f === '.git') return;
-    if (f === '.gitignore') return;
-    if (f === '.editorconfig') return;
-    if (f === 'karma.conf.js') return;
-    if (f === 'browserslist') return;
-    if (f === 'polyfills.ts') return;
-    if (f === 'e2e') return;
-    if (f.endsWith('.json')) return;
-    if (f.endsWith('.ico')) return;
-    if (f.endsWith('.png')) return;
-    // console.log(f); // display directories used to count
+    if (fileName === 'node_modules') return;
+    if (fileName === '.git') return;
+    if (fileName === '.gitignore') return;
+    if (fileName === '.editorconfig') return;
+    if (fileName === 'karma.conf.js') return;
+    if (fileName === 'browserslist') return;
+    if (fileName === 'polyfills.ts') return;
+    if (fileName === 'e2e') return;
+    if (fileName.endsWith('.json')) return;
+    if (fileName.endsWith('.ico')) return;
+    if (fileName.endsWith('.png')) return;
+
+    const filePath = srcFile + "/" + fileName
+    if (!filePath.includes('/old')) {
+      console.log(srcFile + "/" + fileName); // display directories used to count
+      const subjectName = fileName.split('.')[0]
+      console.log(subjectName)
+      lnSubjects[ln].push(subjectName)
+    }
 
     if (isDirectory) {
       // console.log("make recursive count");
-      countFileByLanguage(srcFile + "/" + f, collection, false);
+      countFileByLanguage(srcFile + "/" + fileName, collection, ln, false);
     } else {
-      countLines(srcFile + "/" + f, function (err, data) {
+      countLines(srcFile + "/" + fileName, function (err, data) {
         collection.push(data + 1);
       });
     }
   });
 }
 
-function countFileByLanguage(srcFile, collection, displayFiles) {
+function countFileByLanguage(srcFile, collection, ln, displayFiles) {
   fs.readdir(srcFile, (err, files) => {
     if (err) {
       console.error(err);
@@ -221,7 +240,7 @@ function countFileByLanguage(srcFile, collection, displayFiles) {
 
     if (displayFiles) console.log("Files: " + files.join(", "));
 
-    countLinesFiles(srcFile, files, collection);
+    countLinesFiles(srcFile, files, collection, ln);
   });
 }
 
