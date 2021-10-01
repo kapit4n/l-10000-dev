@@ -1,5 +1,5 @@
 const configLn = [
-  {
+  /* {
     ln: 'reactn-doctor',
     title: "Typescript Denti",
     subjects: [
@@ -7,7 +7,7 @@ const configLn = [
     ],
     src: ['../../react-native/reactnDoctor1/components', '../../react-native/reactnDoctor1/screens', '../../react-native/reactnDoctor1/navigation', '../../react-native/reactnDoctor1/hooks'],
     goal: 2000
-  },
+  }, */
 /*   {
     ln: 'denti-code',
     title: "JavaScript Denti",
@@ -26,14 +26,14 @@ const configLn = [
     src: ['../../react/react-shopping-cart'],
     goal: 2000
   }, */
-  {
+  /* {
     ln: 'js',
     title: "JavaScript",
     subjects: [
       "react, ", "angular, sequelize, mongoose, prisma, node js."
     ],
     goal: 7000
-  },
+  }, */
   {
     ln: 'react',
     title: "React",
@@ -74,12 +74,12 @@ const configLn = [
     subjects: [],
     goal: 500
   }, */
-   {
+   /* {
     ln: 'go',
     title: "go",
     subjects: ["structs", "loops"],
     goal: 3000
-  },
+  }, */
   {
     ln: 'python',
     title: "python",
@@ -104,18 +104,18 @@ const configLn = [
     subjects: [],
     goal: 500
   }, */
-  {
+  /* {
     ln: 'css',
     title: "css",
     subjects: [],
     goal: 500
-  },
-  {
+  }, */
+  /* {
     ln: 'flutter',
     title: "flutter",
     subjects: [],
     goal: 1000
-  },
+  }, */
 ]
 
 exports.configLn = configLn
