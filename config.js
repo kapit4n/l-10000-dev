@@ -8,15 +8,15 @@ const configLn = [
     src: ['../../react-native/reactnDoctor1/components', '../../react-native/reactnDoctor1/screens', '../../react-native/reactnDoctor1/navigation', '../../react-native/reactnDoctor1/hooks'],
     goal: 2000
   }, */
-/*   {
-    ln: 'denti-code',
-    title: "JavaScript Denti",
-    subjects: [
-      "react,", "hooks"
-    ],
-    src: ['../../node/denti-code/src', '../../node/denti-code-server'],
-    goal: 2000
-  }, */
+  /*   {
+      ln: 'denti-code',
+      title: "JavaScript Denti",
+      subjects: [
+        "react,", "hooks"
+      ],
+      src: ['../../node/denti-code/src', '../../node/denti-code-server'],
+      goal: 2000
+    }, */
   /* {
     ln: 'shopping-cart',
     title: "React Shopping Cart",
@@ -42,20 +42,20 @@ const configLn = [
     ],
     goal: 1000
   },
- /*  {
-    ln: 'ts',
-    title: "TS",
-    subjects: [
-      "angular, microORM, typeORM, node js."
-    ],
-    goal: 500
-  }, */
-/*   {
-    ln: 'java',
-    title: "java",
-    subjects: ["reflexion", "strings", "generics", "documentation"],
-    goal: 2000
-  }, */
+  /*  {
+     ln: 'ts',
+     title: "TS",
+     subjects: [
+       "angular, microORM, typeORM, node js."
+     ],
+     goal: 500
+   }, */
+  /*   {
+      ln: 'java',
+      title: "java",
+      subjects: ["reflexion", "strings", "generics", "documentation"],
+      goal: 2000
+    }, */
   /* {
     ln: 'scala',
     title: "scala",
@@ -74,36 +74,36 @@ const configLn = [
     subjects: [],
     goal: 500
   }, */
-   /* {
-    ln: 'go',
-    title: "go",
-    subjects: ["structs", "loops"],
-    goal: 3000
-  }, */
-  {
+  /* {
+   ln: 'go',
+   title: "go",
+   subjects: ["structs", "loops"],
+   goal: 3000
+ }, */
+  /* {
     ln: 'python',
     title: "python",
     subjects: ["collections", ""],
     goal: 2000
-  },
- /*  {
+  }, */
+  {
     ln: 'ruby',
     title: "ruby",
     subjects: ["migrations", "ruby on rails", "presenters", "models"],
     goal: 2000
-  }, */
+  },
   /* {
     ln: 'sql',
     title: "sql",
     subjects: [],
     goal: 500
   }, */
- /*  {
-    ln: 'html',
-    title: "html",
-    subjects: [],
-    goal: 500
-  }, */
+  /*  {
+     ln: 'html',
+     title: "html",
+     subjects: [],
+     goal: 500
+   }, */
   /* {
     ln: 'css',
     title: "css",

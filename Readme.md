@@ -1,12 +1,12 @@
 # All count
 |Language|Goal|Lines%|%|%|%|Subjects|
 |----------|-------|-------|--------|--------|--------|--------|
-|python|10000|2422|24|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |algorithms, django pdf, django tips, unit tests, yield|
+|ruby|10000|2578|26|![ruby](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/ruby.png)|migrations, ruby on rails, presenters, models|ruby rails controllers, ruby rails models|
 |react|1000|197|20|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds|react hooks tips, components|
-|TOTAL|2619|13.095%|
+|TOTAL|2775|13.875%|
 10/02(0)
 
-10/03(2619)
+10/03(2775)
 
 
   # run it
@@ -29,4 +29,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-10-01T14:11:47.682Z
+  , 2021-10-05T00:24:42.304Z
