@@ -26,22 +26,22 @@ const configLn = [
     src: ['../../react/react-shopping-cart'],
     goal: 2000
   }, */
-  /* {
+  {
     ln: 'js',
     title: "JavaScript",
     subjects: [
-      "react, ", "angular, sequelize, mongoose, prisma, node js."
+      "react, ", "node, sequelize, orm, mongodb."
     ],
     goal: 7000
-  }, */
-  {
+  },
+  /* {
     ln: 'react',
     title: "React",
     subjects: [
       "Testing, builds"
     ],
     goal: 1000
-  },
+  }, */
   /*  {
      ln: 'ts',
      title: "TS",
@@ -86,12 +86,12 @@ const configLn = [
     subjects: ["collections", ""],
     goal: 2000
   }, */
-  {
+  /* {
     ln: 'ruby',
     title: "ruby",
     subjects: ["migrations", "ruby on rails", "presenters", "models"],
     goal: 2000
-  },
+  }, */
   /* {
     ln: 'sql',
     title: "sql",
