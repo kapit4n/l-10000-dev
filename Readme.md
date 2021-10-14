@@ -1,12 +1,11 @@
 # All count
 |Language|Goal|Lines%|%|%|%|Subjects|
 |----------|-------|-------|--------|--------|--------|--------|
-|js|10000|7344|73|![js](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/js.png)|react, , node, sequelize, orm, mongodb.|aws sdk, enzyme, node google cloud, node rest, node tips and tricks|
-|go|10000|3330|33|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|consumingRESTfulAPI, data structures, design pattern, go slices, image file url, queue, mux|
-|TOTAL|10674|53.370%|
+|denti-code|2000|1795|90|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|App, App, App, Nav, logo, reportWebVitals, requeriments, setupTests, Readme, app, breadcrumb, www, client files, doctors, records, users, 20210323105958 create user, 20210427012229 create doctor, 20210428201240 create record, 20210430033210 create client file, clientfile, doctor, record, user, client files, clients, doctors, records, users, 20210323105420 demo user, node, index mount, index shallow, main, record popup, main, main, main|
+|TOTAL|1795|17.950%|
 10/02(0)
 
-10/03(10674)
+10/03(1795)
 
 
   # run it
@@ -29,4 +28,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-10-13T14:16:32.194Z
+  , 2021-10-14T20:31:14.540Z
