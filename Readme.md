@@ -1,11 +1,11 @@
 # All count
 |Language|Goal|Lines%|%|%|%|Subjects|
 |----------|-------|-------|--------|--------|--------|--------|
-|denti-code|10000|2002|20|![denti-code](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/denti-code.png)|react,, hooks|App, App, App, Nav, logo, reportWebVitals, requeriments, setupTests, Readme, app, breadcrumb, www, client files, doctors, patients, records, 20210323105958 create user, 20210427012229 create doctor, 20210428201240 create record, 20210430033210 create client file, clientfile, doctor, patient, record, client files, clients, doctors, patients, records, 20210323105420 demo user, node, main, main, main, main, record popup, index mount, index shallow, main, list|
-|TOTAL|2002|20.020%|
+|react|1000|422|42|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds|react context local staorage, react context update, react context, react hooks tips, react hooks, components|
+|TOTAL|422|4.220%|
 10/02(0)
 
-10/03(2002)
+10/03(422)
 
 
   # run it
@@ -28,4 +28,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-10-22T22:01:46.214Z
+  , 2021-10-26T00:05:44.432Z

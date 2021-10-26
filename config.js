@@ -8,7 +8,7 @@ const configLn = [
     src: ['../../react-native/reactnDoctor1/components', '../../react-native/reactnDoctor1/screens', '../../react-native/reactnDoctor1/navigation', '../../react-native/reactnDoctor1/hooks'],
     goal: 2000
   }, */
-  {
+ /*  {
     ln: 'denti-code',
     title: "JavaScript Denti",
     subjects: [
@@ -16,7 +16,7 @@ const configLn = [
     ],
     src: ['../../node/denti-code/src', '../../node/denti-code-server'],
     goal: 2000
-  },
+  }, */
   /* {
     ln: 'shopping-cart',
     title: "React Shopping Cart",
@@ -34,14 +34,14 @@ const configLn = [
     ],
     goal: 7000
   }, */
-  /* {
+  {
     ln: 'react',
     title: "React",
     subjects: [
       "Testing, builds"
     ],
     goal: 1000
-  }, */
+  },
   /*  {
      ln: 'ts',
      title: "TS",
