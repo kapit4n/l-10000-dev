@@ -1,11 +1,11 @@
 # All count
 |Language|Goal|Lines%|%|%|%|Subjects|
 |----------|-------|-------|--------|--------|--------|--------|
-|react|1000|422|42|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds|react context local staorage, react context update, react context, react hooks tips, react hooks, components|
-|TOTAL|422|4.220%|
+|react|1000|468|47|![react](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/react.png)|Testing, builds|react context local staorage, react context update, react context, react custom hook, react hooks tips, react hooks, components|
+|TOTAL|468|4.680%|
 10/02(0)
 
-10/03(422)
+10/03(468)
 
 
   # run it
@@ -28,4 +28,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-10-26T00:05:44.432Z
+  , 2021-10-26T13:52:24.065Z
