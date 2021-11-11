@@ -1,11 +1,11 @@
 # All count
 |Language|Goal|Lines%|%|%|%|Subjects|
 |----------|-------|-------|--------|--------|--------|--------|
-|python|10000|2526|25|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |algorithms, authentication jwt, aws s3 boto3, django pdf, django tips, g cloud storage, login flask, unit tests, yield|
-|TOTAL|2526|25.260%|
+|python|10000|2611|26|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |algorithms, authentication jwt, aws s3 boto3, django pdf, django tips, g cloud storage, login django, login flask, unit tests, yield|
+|TOTAL|2611|26.110%|
 10/02(0)
 
-10/03(2526)
+10/03(2611)
 
 
   # run it
@@ -28,4 +28,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-11-11T02:12:58.681Z
+  , 2021-11-11T03:09:01.800Z
