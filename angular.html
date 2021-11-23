@@ -1,0 +1,28 @@
+
+      <!DOCTYPE HTML>
+      <html>
+      <head></head>
+      <body>
+        <div style="width: 500px;">
+          <canvas id="angular" width="300" height="150"></canvas>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        <script>
+          var ctx = document.getElementById("angular").getContext("2d");
+          const goLabelsDates = ["2021-11-23T01:36:10.098Z",];
+          var chart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1)),
+              datasets: [{
+                label: 'angular Progress',
+                backgroundColor: 'rgb(255, 0, 132)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: [34,]
+              }]
+            },
+          });
+        </script>
+      </body>
+      </html>  
+      
