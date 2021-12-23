@@ -1,12 +1,11 @@
 # All count
 |Language|Goal|Lines%|%|%|%|Subjects|
 |----------|-------|-------|--------|--------|--------|--------|
-|go|10000|3573|36|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|consumingRESTfulAPI, data structures, design pattern, go slices, image file url, mysql, queue, web3, auth0, fiber example, defer feature, mux, face recognition|
-|python|10000|2921|29|![python](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/python.png)|collections, |algorithms, authentication jwt, authentication vs autorization, aws s3 boto3, django pdf, django tips, g cloud storage, login django, login flask, mysql, unit tests, web3, yield, auth0, face recognition, video face recognition|
-|TOTAL|6494|32.470%|
+|go|10000|3677|37|![go](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/go.png)|structs, loops|consumingRESTfulAPI, data structures, design pattern, go slices, image file url, mysql, queue, web3, auth0, gin auth, defer feature, fiber example, mux, face recognition|
+|TOTAL|3677|36.770%|
 10/02(0)
 
-10/03(6494)
+10/03(3677)
 
 
   # run it
@@ -29,4 +28,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2021-11-23T23:01:06.868Z
+  , 2021-12-23T17:01:27.655Z

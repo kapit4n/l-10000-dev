@@ -88,12 +88,12 @@ const configLn = [
     subjects: ["structs", "loops"],
     goal: 3000
   },
-  {
+  /* {
     ln: 'python',
     title: "python",
     subjects: ["collections", ""],
     goal: 2000
-  },
+  }, */
   /* {
     ln: 'ruby',
     title: "ruby",
