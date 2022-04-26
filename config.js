@@ -93,6 +93,12 @@ const configLn = [
     title: "python",
     subjects: ["collections", ""],
     goal: 2000
+  }, 
+  {
+    ln: 'security',
+    title: "security",
+    subjects: ["react", "website"],
+    goal: 2000
   },
   /* {
     ln: 'ruby',
