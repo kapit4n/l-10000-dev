@@ -34,14 +34,14 @@ const configLn = [
     ],
     goal: 7000
   }, */
-  /* {
+  {
     ln: 'react',
     title: "React",
     subjects: [
       "Testing, builds"
     ],
     goal: 10000
-  }, */
+  },
  /*  {
     ln: 'angular',
     title: "Angular",
