@@ -100,12 +100,12 @@ const configLn = [
     subjects: ["react", "website"],
     goal: 2000
   },
-  /* {
+  {
     ln: 'ruby',
     title: "ruby",
     subjects: ["migrations", "ruby on rails", "presenters", "models"],
     goal: 2000
-  }, */
+  },
   /* {
     ln: 'sql',
     title: "sql",
