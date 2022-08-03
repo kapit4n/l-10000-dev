@@ -106,6 +106,12 @@ const configLn = [
     subjects: ["migrations", "ruby on rails", "presenters", "models"],
     goal: 2000
   },
+  {
+    ln: 'node js',
+    title: "node js",
+    subjects: ["migrations", "ruby on rails", "presenters", "models"],
+    goal: 1000
+  },
   /* {
     ln: 'sql',
     title: "sql",
