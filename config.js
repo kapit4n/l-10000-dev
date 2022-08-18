@@ -64,12 +64,12 @@ const configLn = [
       subjects: ["reflexion", "strings", "generics", "documentation"],
       goal: 2000
     }, */
-  /* {
+  {
     ln: 'scala',
     title: "scala",
     subjects: ["play framework", "akka", "collections"],
     goal: 6000
-  }, */
+  },
   /* {
     ln: 'dotnet',
     title: "dotnet",
