@@ -9,7 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
           var ctx = document.getElementById("blockchain").getContext("2d");
-          const goLabelsDates = ["2022-09-16T00:12:15.203Z",];
+          const goLabelsDates = ["2022-09-16T00:12:15.203Z","2022-09-16T00:55:55.246Z","2022-09-16T00:56:24.579Z",];
           var chart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -18,7 +18,7 @@
                 label: 'blockchain Progress',
                 backgroundColor: 'rgb(255, 0, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [11,]
+                data: [11,135,135,]
               }]
             },
           });

@@ -34,14 +34,14 @@ const configLn = [
     ],
     goal: 7000
   }, */
-  {
+  /* {
     ln: 'react',
     title: "React",
     subjects: [
       "Testing, builds"
     ],
     goal: 10000
-  },
+  }, */
  /*  {
     ln: 'angular',
     title: "Angular",
@@ -64,12 +64,12 @@ const configLn = [
       subjects: ["reflexion", "strings", "generics", "documentation"],
       goal: 2000
     }, */
-  {
+  /* {
     ln: 'scala',
     title: "scala",
     subjects: ["play framework", "akka", "collections"],
     goal: 6000
-  },
+  }, */
   {
     ln: 'blockchain',
     title: "blockchain",
@@ -94,7 +94,7 @@ const configLn = [
     subjects: ["structs", "loops"],
     goal: 3000
   }, */
-  {
+/*   {
     ln: 'python',
     title: "python",
     subjects: ["collections", ""],
@@ -117,7 +117,7 @@ const configLn = [
     title: "node js",
     subjects: ["migrations", "ruby on rails", "presenters", "models"],
     goal: 1000
-  },
+  }, */
   /* {
     ln: 'sql',
     title: "sql",
