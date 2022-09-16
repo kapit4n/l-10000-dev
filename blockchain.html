@@ -4,21 +4,21 @@
       <head></head>
       <body>
         <div style="width: 500px;">
-          <canvas id="node js" width="300" height="150"></canvas>
+          <canvas id="blockchain" width="300" height="150"></canvas>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
         <script>
-          var ctx = document.getElementById("node js").getContext("2d");
-          const goLabelsDates = ["2022-08-01T19:30:18.883Z","2022-08-01T19:34:17.316Z","2022-08-03T14:26:07.793Z","2022-08-18T13:32:42.243Z","2022-08-18T15:14:07.485Z","2022-08-23T15:23:25.624Z","2022-08-23T15:50:13.695Z","2022-09-16T00:05:22.815Z","2022-09-16T00:12:15.204Z",];
+          var ctx = document.getElementById("blockchain").getContext("2d");
+          const goLabelsDates = ["2022-09-16T00:12:15.203Z",];
           var chart = new Chart(ctx, {
             type: 'line',
             data: {
               labels: goLabelsDates.map(x => new Date(x).getDate() + "-" + (new Date(x).getMonth() + 1)),
               datasets: [{
-                label: 'node js Progress',
+                label: 'blockchain Progress',
                 backgroundColor: 'rgb(255, 0, 132)',
                 borderColor: 'rgb(255, 99, 132)',
-                data: [130,130,279,343,343,343,343,343,343,]
+                data: [11,]
               }]
             },
           });

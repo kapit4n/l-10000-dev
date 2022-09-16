@@ -70,6 +70,12 @@ const configLn = [
     subjects: ["play framework", "akka", "collections"],
     goal: 6000
   },
+  {
+    ln: 'blockchain',
+    title: "blockchain",
+    subjects: ["Ethereum", "Blockchain", "Solidity"],
+    goal: 1000
+  },
   /* {
     ln: 'dotnet',
     title: "dotnet",
