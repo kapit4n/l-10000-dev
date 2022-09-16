@@ -1,11 +1,11 @@
 # All count
 |Language|Goal|Lines%|%|%|%|Subjects|
 |----------|-------|-------|--------|--------|--------|--------|
-|blockchain|1000|135|14|![blockchain](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/blockchain.png)|Ethereum, Blockchain, Solidity|features|
-|TOTAL|135|1.350%|
+|blockchain|1000|200|20|![blockchain](https://raw.githubusercontent.com/kapit4n/l-10000-dev/master/blockchain.png)|Ethereum, Blockchain, Solidity|Token, features, interfaces|
+|TOTAL|200|2.000%|
 10/02(0)
 
-10/03(135)
+10/03(200)
 
 
   # run it
@@ -28,4 +28,4 @@
   * Angular, React, Vue
   * Spring, Play
   * Scala, Java
-  , 2022-09-16T00:56:24.589Z
+  , 2022-09-16T01:20:23.254Z
