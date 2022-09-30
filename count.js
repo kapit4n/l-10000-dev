@@ -202,19 +202,8 @@ function countLinesFiles(srcFile, files, collection, ln) {
       console.log(e);
     }
 
-    if (fileName === 'node_modules') return;
-    if (fileName === '.git') return;
-    if (fileName === 'go.mod') return;
-    if (fileName === 'go.sum') return;
-    if (fileName === '.gitignore') return;
-    if (fileName === '.editorconfig') return;
-    if (fileName === 'karma.conf.js') return;
-    if (fileName === 'browserslist') return;
-    if (fileName === 'polyfills.ts') return;
-    if (fileName === 'e2e') return;
-    if (fileName.endsWith('.json')) return;
-    if (fileName.endsWith('.ico')) return;
-    if (fileName.endsWith('.png')) return;
+    const ignoreFiles = ['node_modules', '.git', 'go.mod', 'go.sum', '.gitignore', '.editorconfig', 'karma.conf.js', 'browserslist', 'polyfills.ts', '.json', 'e2e', '.ico', '.png']
+    if (ignoreFiles.includes(fileName)) return
 
     const filePath = srcFile + "/" + fileName
     if (!filePath.includes('/old') && !fileName.startsWith('index.')) {
